@@ -1,0 +1,920 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* White text */
+    background-color: #001f3f; /* Navy blue background */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #001b36; /* Same navy background */
+    color: #ffffff; /* White text */
+    padding: 15px 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #94d2bd; /* Accent teal on hover */
+}
+
+
+
+
+
+/* Opening Section */
+.opening {
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between; /* Space between text and image */
+    height: 100vh;
+    background: linear-gradient(135deg, #001f3f, #002855); /* Navy gradient */
+    color: #ffffff; /* White text */
+}
+
+.opening .text {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.opening .text h1 {
+    font-size: 6rem;
+    margin-bottom: 0.25rem;
+}
+
+.opening .text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.15rem;
+}
+
+.opening .text p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.second-line {
+    display: inline-block;
+    margin-top: 20px; /* Adds 30px of space above the second paragraph */
+}
+.third-line {
+    display: inline-block;
+    margin-bottom: 20px; /* Adds 30px of space above the second paragraph */
+}
+
+/* Button Section (below text) */
+.opening .text .button-container {
+    display: flex;
+    justify-content: left; /* Center the button horizontally */
+    width: 100%; /* Full width to allow centering */
+    margin-top: 30px; /* Optional, adjust space from text */
+}
+
+/* Style for the button */
+.opening .cta-btn {
+    display: inline-block;
+    background: #ffffff; /* White button background */
+    color: #001f3f; /* Navy blue text for the button */
+    padding: 5px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center; /* Center the button horizontally */
+    transition: background 0.3s;
+    margin-right: 30px;
+}
+
+/* Hover effect for the button */
+.opening .cta-btn:hover {
+    background: #94d2bd; /* Teal hover effect */
+    color: #001f3f;
+}
+
+/* Image Section */
+.opening .image {
+    flex: 1;
+    display: flex; /* Ensures proper centering of the image */
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px 30px 30px;
+    width: 30%; /* Width relative to the screen */
+    aspect-ratio: 3 / 2; /* Makes the container naturally oval-shaped */
+    border-radius: 50%; /* Creates an oval */
+    overflow: hidden; /* Ensures the image fits inside the container */
+    box-shadow: 15px 15px 30px 2px rgba(148, 210, 189, 0.7); /* Teal shadow */
+    background: url('150 BTS 2025 STEM Calendar.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image fills the container without distortion */
+}
+
+/* Footer */
+footer {
+        background: #001b36; /* navy background */
+        color: #ffffff; /* White text */
+        text-align: center; /* Center the text */
+        padding: 20px 0px; /* Add padding to top and bottom */
+        font-size: 0.9rem;
+        width: 100%; /* Ensure it takes up the full width of the page */
+        margin: 0; /* Remove any default margin */
+        position: relative; /* Ensures it stays in regular flow */
+}
+
+footer p {
+    text-align: center;
+    margin: 0; /* Ensures no extra margin around the text */
+    padding: 5px 5px; /* Add padding to top and bottom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .opening .text, .about, .about .statement {
+        flex-direction: column; /* Stacks text and image vertically */
+    }
+
+    .opening .text, .about{
+        width: 100%; /* Adjust to full width */
+        height: auto; /* Scale height proportionally */
+    }
+
+    .opening .image {
+        width: 40%; /* Slightly smaller width for smaller screens */
+        aspect-ratio: 1 / 1; /* Adjust aspect ratio for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .opening .image {
+        width: 50%; /* Further reduce the size on very small screens */
+        aspect-ratio: 1 / 1; /* Square shape for smaller screens */
+    }
+}
+
+.custom-highlight {
+    background-color: rgba(148, 210, 189, 0.7); /* Teal color */
+    color: white; /* Navy text */
+    padding: 2px; /* Optional: Add some padding */
+    border-radius: 4px; /* Optional: Rounded corners */
+}
+
+/* Name slide-in animation */
+.name-slide {
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: bold;
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slide-in 1s ease-out forwards; /* Slide in smoothly */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Off-screen */
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Fully visible */
+    }
+}
+
+
+
+
+
+
+/* About Section */
+.about {
+    position: relative:
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    height: 50vh;
+    background: #00264e;
+    color: white; /* navy text */
+}
+
+/* Button Section (below text) */
+.about .border-container {
+    width: 100%; /* Full width to allow centering */
+    margin: 10px; /* Optional, adjust space from text */
+    outline: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.8); /* Teal shadow */
+}
+
+.about h1 {
+    font-size: 4rem;
+    margin-left: 1rem;
+    margin-bottom: 0.1rem;
+    color: #94d2bd;
+    width: 100%;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.1rem;
+    color: #94d2bd;
+    width: 100%;
+}
+
+.about p {
+    font-size: 1.5rem;
+    margin-bottom: 0.15rem;
+    color: white;
+
+}
+
+.about .statement {
+    text-align: center; /* Centers the paragraph */
+    margin-top: 20px; /* Adds space between the heading and the paragraph */
+    
+}
+
+mark.teal {
+    color:#94d2bd;
+    background: none;
+}
+
+
+
+
+/* Achievement Section */
+.ach {
+    position: relative:
+    text-align: left;
+    padding: 30px;
+    justify-content: space-between; /* Space between text and image */
+    height: 200vh;
+    background: linear-gradient(135deg, #001f3f, #002855); /* Navy gradient */
+    color: #ffffff; /* White text */
+}
+
+.ach h1 {
+    font-size: 6rem;
+    margin-bottom: 0.25rem;
+}
+
+ach h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.ach p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* Project Section */
+.proj {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between; /* Space between text and image */
+    height: 65vh;
+    background: #001f3f ; /* Navy gradient */
+    color: #ffffff; /* White text */
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.proj h1 {
+    font-size: 6rem;
+    margin-bottom: 0.25rem;
+}
+
+.proj h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.proj p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-item {
+    position: relative;
+    width: 48%; /* Makes each photo take up half the width of the container */
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 8px; /* Optional: to add rounded corners */
+    transition: transform 0.3s ease; /* Optional smooth transition */
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the space without distorting */
+    opacity: 0.7; /* Slightly dim the image initially */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0.7; /* Makes the title legible even when the image is dimmed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1); /* Image zoom on hover */
+    opacity: 1; /* Remove dimming effect on hover */
+}
+
+.project-item:hover .overlay {
+    opacity: 1; /* Full visibility of overlay when hovering */
+}
+
+.project-item h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item a {
+    text-decoration: none; /* Remove default link styling */
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .proj {
+        flex-direction: column; /* Stacks the items vertically on smaller screens */
+    }
+
+    .project-item {
+        width: 100%; /* Makes each item take up full width on small screens */
+    }
+}
+
+
+\/* Opening Section Proj */
+.openingp {
+    position: relative:
+    text-align: left;
+    padding: 15px;
+    justify-content: space-between; /* Space between text and image */
+    height: auto;
+    background: linear-gradient(135deg, #001f3f, #002855); /* Navy gradient */
+    color: #ffffff; /* White text */
+}
+
+.openingp h1 {
+    margin-left: 25px;
+    text-align: left;
+    font-size: 6rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Design Team Projects */
+.design-team {
+    padding: 30px;
+    text-align: center;
+    flex-direction: column;
+    height: 135vh;
+    background: linear-gradient(135deg, #001f3f, #002855); /* Navy gradient */
+    color: #ffffff; /* White text */
+}
+
+.design-team h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.design-team h2 {
+    font-size: 2rem;
+    margin-bottom: 0.15rem;
+}
+
+.design-team p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.design-team .dtcontainer {
+    width: 100%; /* Full width to allow centering */
+    margin: 10px auto; /* Optional, adjust space from text */
+    box-shadow: 0px 0px 30px 15px rgba(148, 210, 189, 0.7);
+}
+
+.text-box {
+    background-color: rgba(148, 210, 189, 0.3);; /* teal background for the text box */
+    color: white; /* Dark text color for readability */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1300px; /* Limit the width of the text box */
+    text-align: left;
+    margin: 20px auto 10px;
+}
+
+.design-team .text-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
+}
+
+.design-team .text-box p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.teal-link {
+    color: white; /* Initial text color navy */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.teal-link:hover {
+    color: #94d2bd; /* Teal color on hover */
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+/*****************************************
+ PROJECT PHOTOS / CARDS
+******************************************/
+.project-photos {
+  display: grid;
+  /* Each card is at least 250px wide and will wrap as needed */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px; /* Add padding to create extra space at the edges */
+}
+
+.photo-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: #001f3f;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* So it looks clickable */
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-info {
+  padding: 15px;
+}
+
+.photo-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.photo-info p {
+  margin-bottom: 1rem;
+}
+
+.expand-btn {
+  background-color: #20c997;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.expand-btn:hover {
+  background-color: #17a287;
+}
+
+/*****************************************
+  MODAL STYLES
+******************************************/
+.modal {
+  display: none;              /* Hidden by default */
+  position: fixed;            /* Stay in place */
+  z-index: 9999;             /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;             /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;            /* 5% from the top, 0 auto horizontally */
+  border-radius: 10px;
+  max-width: 700px;           /* Could be smaller or bigger */
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.modal-images img {
+  width: 48%; /* Two images per row if possible */
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #999;
+}
+
+/* Personal Projects */
+.personal-project {
+    padding: 30px;
+    text-align: center;
+    flex-direction: column;
+    height: 120vh;
+    background: linear-gradient(135deg, #001f3f, #002855); /* Navy gradient */
+    color: #ffffff; /* White text */
+}
+
+.personal-project h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.personal-project h2 {
+    font-size: 2rem;
+    margin-bottom: 0.15rem;
+}
+
+.personal-project p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.personal-project .ppcontainer {
+    width: 100%; /* Full width to allow centering */
+    margin: 10px auto; /* Optional, adjust spacing from text */
+    box-shadow: 0px 0px 30px 15px rgba(148, 210, 189, 0.7);
+}
+
+.text-box {
+    background-color: rgba(148, 210, 189, 0.3); /* Teal background for the text box */
+    color: white;        /* White text for readability */
+    padding: 15px;
+    border-radius: 5px;  /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1300px;   /* Limit the width of the text box */
+    text-align: left;
+    margin: 20px auto 10px;
+}
+
+.personal-project .text-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
+}
+
+.personal-project .text-box p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.teal-link {
+    color: white;               /* Initial text color */
+    text-decoration: none;      /* Remove underline */
+    transition: color 0.3s ease;/* Smooth color transition */
+}
+
+.teal-link:hover {
+    color: #94d2bd;             /* Teal color on hover */
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+/*****************************************
+ PROJECT PHOTOS / CARDS
+******************************************/
+.project-photos {
+  display: grid;
+  /* Each card is at least 250px wide and will wrap as needed */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px; /* Extra space at the edges */
+}
+
+.photo-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: #001f3f;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* So it looks clickable */
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-info {
+  padding: 15px;
+}
+
+.photo-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.photo-info p {
+  margin-bottom: 1rem;
+}
+
+.expand-btn {
+  background-color: #20c997;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.expand-btn:hover {
+  background-color: #17a287;
+}
+
+/*****************************************
+  MODAL STYLES
+******************************************/
+.modal {
+  display: none;              /* Hidden by default */
+  position: fixed;            /* Stay in place */
+  z-index: 9999;             /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;             /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;            /* 5% from the top, 0 auto horizontally */
+  border-radius: 10px;
+  max-width: 700px;           /* Could be smaller or bigger */
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.modal-images img {
+  width: 48%;
+}
+               
+               /*****************************************
+                 CONTACT SECTION (Add at the end)
+               ******************************************/
+
+
+                .contact-section {
+                background: linear-gradient(135deg, #001f3f 50%, #20c997 100%);
+                 color: #fff;
+                 justify-content: center;
+                 align-items: center;
+                 padding: 60px 20px;
+               }
+.contact-section .text {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.contact-section .text h1 {
+    font-size: 6rem;
+    margin-bottom: 0.25rem;
+}
+
+               .contact-card {
+                 background-color: #ffffff;
+                 color: #001f3f; /* Navy text */
+                 max-width: 1000px;
+                 width: 100%;
+                 padding: 30px;
+                 border-radius: 12px;
+                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+                 text-align: left;
+               }
+
+               .contact-card h1 {
+                 font-size: 2.2rem;
+                 margin-bottom: 1.5rem;
+               }
+
+               /* Contact Details */
+               .contact-details p {
+                 margin-bottom: 1rem;
+                 font-size: 1.5rem;
+                 display: flex;
+                 justify-content: left;
+               }
+
+               .contact-details strong {
+                 width: 70px;
+                 min-width: 70px;
+               }
+
+               .contact-details a {
+                 color: #001f3f; /* Navy for links */
+                 text-decoration: none;
+                 margin-left: 0.3rem;
+                 transition: color 0.3s ease;
+               }
+
+               .contact-details a:hover {
+                 color: #20c997; /* Teal hover */
+                 text-decoration: underline;
+               }
+
+               /* Special Note / Interview Section */
+               .interview-note {
+                 margin-top: 2rem;
+                 background-color: rgba(32, 201, 151, 0.1); /* Light teal overlay */
+                 padding: 20px;
+                 border-left: 6px solid #20c997;
+                 border-radius: 8px;
+                 text-align: left;
+               }
+
+               .interview-note h2 {
+                 margin-bottom: 0.5rem;
+                 font-size: 2rem;
+                 color: #001f3f;
+               }
+
+               .interview-note p {
+                 line-height: 1.7;
+               }
+
+               .interview-note a {
+                 color: #20c997;
+                 text-decoration: none;
+                 font-weight: bold;
+               }
+
+               .interview-note a:hover {
+                 text-decoration: underline;
+               }
+
+
+.content {
+    padding: 20px;
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    color: black;
+    
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    outline: 5px solid #20c997;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
