@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyra Fletcher | Media Recognition</title>
+
+  <style>
+    :root{
+      --bg:#fff; --text:#121212; --muted:#5a5a5a;
+      --accent:#ffd400; --accentSoft: rgba(255, 212, 0, 0.28);
+      --border: rgba(0,0,0,0.09);
+      --shadowGlow: 0 0 0.9rem rgba(255, 212, 0, 0.55), 0 0 2.4rem rgba(255, 212, 0, 0.25);
+      --shadowSoft: 0 10px 30px rgba(0,0,0,0.06);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    .wrap{ width:min(1100px, 92vw); margin:0 auto; padding:28px 0 60px; }
+
+    header{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:18px;
+    }
+    .name{ margin:0; font-size:clamp(28px,4.5vw,44px); letter-spacing:-0.02em; }
+    .toplinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px; border:1px solid var(--border);
+      text-decoration:none; color:var(--text); background:#fff;
+      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-weight:600; font-size:14px;
+    }
+    .pill:hover{ transform:translateY(-1px); box-shadow:var(--shadowGlow); }
+
+    @media (max-width: 860px){
+      header{ align-items:flex-start; flex-direction:column; }
+      .toplinks{ justify-content:flex-start; }
+    }
+
+    .hero{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow: var(--shadowGlow);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:18px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-80px -80px auto auto;
+      width:220px; height:220px;
+      background: radial-gradient(circle, var(--accentSoft), transparent 65%);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    .hero h2{ margin:0 0 8px 0; font-size:18px; letter-spacing:-0.01em; }
+    .hero p{ margin:0; color:var(--muted); line-height:1.55; }
+
+    .list{
+      display:grid;
+      gap:14px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 900px){ .list{ grid-template-columns: 1fr; } }
+
+    .item{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow: 0 0 0.8rem rgba(255, 212, 0, 0.20);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .itemTop{
+      padding:14px;
+      border-bottom:1px solid rgba(0,0,0,0.08);
+      background: radial-gradient(circle at 15% 30%, rgba(255, 212, 0, 0.20), transparent 55%), #fff;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .title{ margin:0; font-size:15px; letter-spacing:-0.01em; }
+    .source{ margin:3px 0 0 0; color:var(--muted); font-size:13px; line-height:1.3; }
+    .date{
+      font-size:12px;
+      color:rgba(0,0,0,0.55);
+      border:1px solid rgba(0,0,0,0.10);
+      padding:8px 10px;
+      border-radius:999px;
+      height:fit-content;
+      box-shadow: var(--shadowSoft);
+      white-space:nowrap;
+    }
+    .itemBody{ padding:12px 14px 14px; }
+    .itemBody p{ margin:0; color:var(--text); line-height:1.55; font-size:14px; }
+    .actions{ margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+    .linkBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,0.12);
+      background:#fff;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      box-shadow: 0 0 0.6rem rgba(255, 212, 0, 0.14);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-size:13px;
+    }
+    .linkBtn:hover{ transform: translateY(-1px); box-shadow: var(--shadowGlow); }
+    .site-footer{
+      width: min(1100px, 92vw);
+      margin: 28px auto 0;
+      padding: 14px 16px;
+      text-align: center;
+      color: rgba(0,0,0,0.60);
+      font-size: 13px;
+      border: 1px solid rgba(0,0,0,0.09);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="name">Media Recognition</h1>
+      <nav class="toplinks" aria-label="Top links">
+        <a class="pill" href="index.html">← Home</a>
+        <a class="pill" href="main.html">Projects</a>
+        <a class="pill" href="experience.html">Experience</a>
+        <a class="pill" href="media.html">Media</a>
+        <a class="pill" href="./Lyra_Fletcher_CV_2026.pdf" target="_blank" rel="noopener">Open CV</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Media intro">
+      <h2>Features, awards, and mentions</h2>
+      <p>
+        A selection of features, awards, and public recognitions highlighting my work in engineering, leadership, and community impact.
+      </p>
+
+    </section>
+
+    <section class="list" aria-label="Media cards">
+
+      <article class="item">
+        <div class="itemTop">
+          <div>
+            <h3 class="title">See It, Be It, Stem It Representative</h3>
+            <p class="source">Linamar Corportation • STEM outreach & representation</p>
+          </div>
+          <div class="date">July 2024</div>
+        </div>
+        <div class="itemBody">
+          <p>
+          Selected as a representative to share my pathway in engineering and help encourage younger students to explore STEM.
+                Spoke about hands-on design work, leadership experiences, and what it’s like pursuing Mechatronics/Mechanical Engineering at UBC.
+          </p>
+          <div class="actions">
+              <a class="linkBtn" href="https://www.seeitbeitstemit.com/2025lyra-fletcher" target="_blank" rel="noopener">
+                      Read / Watch →
+                    </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="itemTop">
+          <div>
+            <h3 class="title">$80,000 Schulich Leader Award</h3>
+            <p class="source">Schulich Leader Scholarships • Innovation in automated naloxone injector design</p>
+          </div>
+          <div class="date">2022</div>
+        </div>
+        <div class="itemBody">
+          <p>
+            Awarded one of Canada’s most prestigious STEM scholarships for work on an automated naloxone injector design that advances emergency response and public health.
+            Recognized for combining engineering innovation with community impact and leadership in healthcare access.
+          </p>
+          <div class="actions">
+            <a class="linkBtn" href="https://schulichleaders.com/scholars/lyra-fletcher/" target="_blank" rel="noopener">
+              View Scholar Profile →
+            </a>
+            <a class="linkBtn" href="https://give.ubc.ca/news/schulich-scholars-2022/" target="_blank" rel="noopener">
+              Read UBC Feature →
+            </a>
+          </div>
+        </div>
+      </article>
+      
+      <article class="item">
+        <div class="itemTop">
+          <div>
+            <h3 class="title">McEwen Family Entrance Award</h3>
+            <p class="source">UBC Biomedical Engineering • Recognition for promising biomedical engineering students</p>
+          </div>
+          <div class="date">November 2023</div>
+        </div>
+        <div class="itemBody">
+          <p>
+            Awarded the McEwen Family Entrance Award in recognition of academic excellence and potential in biomedical engineering.
+            This award celebrates students poised to contribute to innovation and leadership within the BME community at UBC.
+          </p>
+          <div class="actions">
+            <a class="linkBtn" href="https://bme.ubc.ca/new-ubc-scholarship-the-mcewen-family-entrance-award-represents-the-future-of-biomedical-engineering/" target="_blank" rel="noopener">
+              Read UBC Feature →
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="item">
+        <div class="itemTop">
+          <div>
+            <h3 class="title">Automated Naloxone Injector Feature</h3>
+            <p class="source">Nanaimo Bulletin • Innovation in overdose-prevention technology</p>
+          </div>
+          <div class="date">May 2020</div>
+        </div>
+        <div class="itemBody">
+          <p>
+            Covered by the Nanaimo Bulletin for developing an automated naloxone injector designed to improve emergency overdose response.
+            The feature highlights the design process, community impact, and the motivation to save lives through accessible engineering solutions.
+          </p>
+          <div class="actions">
+            <a class="linkBtn" href="https://nanaimobulletin.com/2020/06/12/video-alert-bay-pharmacists-daughter-invents-automated-device-to-prevent-overdose-deaths/" target="_blank" rel="noopener">
+              Read the Article →
+            </a>
+          </div>
+        </div>
+      </article>
+      
+      
+    </section>
+  </div>
+  <footer class="site-footer">© Lyra Fletcher 2026</footer>
+</body>
+</html>
+

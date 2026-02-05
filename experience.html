@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyra Fletcher | Experience</title>
+
+  <style>
+    :root{
+      --bg:#fff; --text:#121212; --muted:#5a5a5a;
+      --accent:#ffd400; --accentSoft: rgba(255, 212, 0, 0.28);
+      --border: rgba(0,0,0,0.09);
+      --shadowGlow: 0 0 0.9rem rgba(255, 212, 0, 0.55), 0 0 2.4rem rgba(255, 212, 0, 0.25);
+      --shadowSoft: 0 10px 30px rgba(0,0,0,0.06);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    .wrap{ width:min(1100px, 92vw); margin:0 auto; padding:28px 0 60px; }
+
+    header{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:18px;
+    }
+    .name{ margin:0; font-size:clamp(28px,4.5vw,44px); letter-spacing:-0.02em; }
+    .toplinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px; border:1px solid var(--border);
+      text-decoration:none; color:var(--text); background:#fff;
+      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-weight:600; font-size:14px;
+    }
+    .pill:hover{ transform:translateY(-1px); box-shadow:var(--shadowGlow); }
+
+    @media (max-width: 860px){
+      header{ align-items:flex-start; flex-direction:column; }
+      .toplinks{ justify-content:flex-start; }
+    }
+
+    .hero{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow: var(--shadowGlow);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:18px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-120px auto auto -120px;
+      width:260px; height:260px;
+      background: radial-gradient(circle, var(--accentSoft), transparent 65%);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    .hero h2{ margin:0 0 8px 0; font-size:18px; letter-spacing:-0.01em; }
+    .hero p{ margin:0; color:var(--muted); line-height:1.55; }
+
+    /* Section headers */
+    .section{
+      margin-top: 18px;
+    }
+    .sectionHead{
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 12px 0;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.01em;
+    }
+    .sectionHead small{
+      color: var(--muted);
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr; } }
+
+    .card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:#fff;
+      box-shadow: 0 0 0.8rem rgba(255, 212, 0, 0.20);
+      overflow:hidden;
+    }
+
+    .cardHead{
+      padding:14px 14px 12px;
+      border-bottom:1px solid rgba(0,0,0,0.08);
+      background: radial-gradient(circle at 15% 30%, rgba(255, 212, 0, 0.20), transparent 55%), #fff;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .role{ margin:0; font-size:15px; letter-spacing:-0.01em; }
+    .where{ margin:3px 0 0 0; color:var(--muted); font-size:13px; line-height:1.3; }
+    .dates{
+      font-size:12px;
+      color:rgba(0,0,0,0.55);
+      border:1px solid rgba(0,0,0,0.10);
+      padding:8px 10px;
+      border-radius:999px;
+      height:fit-content;
+      box-shadow: var(--shadowSoft);
+      white-space:nowrap;
+    }
+
+    .cardBody{ padding:12px 14px 14px; }
+    ul{ margin:0; padding-left:18px; color:var(--text); }
+    li{ margin:8px 0; line-height:1.45; }
+
+    .skillsRow{ margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
+    .tag{
+      border:1px solid rgba(0,0,0,0.12);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:13px;
+      background:#fff;
+      box-shadow: 0 0 0.6rem rgba(255, 212, 0, 0.14);
+      font-weight:650;
+    }
+
+    /* Optional: quick anchor buttons to jump between categories */
+    .jumpRow{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .jump{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,0.12);
+      background:#fff;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      box-shadow: 0 0 0.6rem rgba(255, 212, 0, 0.14);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-size:13px;
+    }
+    .jump:hover{ transform: translateY(-1px); box-shadow: var(--shadowGlow); }
+
+    /* Footer */
+    .site-footer{
+      width: min(1100px, 92vw);
+      margin: 28px auto 0;
+      padding: 14px 16px;
+      text-align: center;
+      color: rgba(0,0,0,0.60);
+      font-size: 13px;
+      border: 1px solid rgba(0,0,0,0.09);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="name">Experience</h1>
+      <nav class="toplinks" aria-label="Top links">
+        <a class="pill" href="index.html">← Home</a>
+        <a class="pill" href="main.html">Projects</a>
+        <a class="pill" href="experience.html">Experience</a>
+        <a class="pill" href="media.html">Media</a>
+
+        <!-- Put your PDF filename here (same folder as HTML) -->
+        <a class="pill" href="./Lyra_Fletcher_CV_2026.pdf" target="_blank" rel="noopener">Open CV</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Experience intro">
+      <h2>Snapshot</h2>
+      <p>
+      A comprehensive overview of my experience technically, personally, and socially. Each entry highlights impact, scope, and the skills I used.
+      </p>
+
+      <div class="jumpRow" aria-label="Jump to categories">
+        <a class="jump" href="#work">Work</a>
+        <a class="jump" href="#design-teams">Design Teams</a>
+        <a class="jump" href="#volunteering">Volunteering</a>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section" id="work" aria-label="Work experience">
+      <div class="sectionHead">
+        <h2>Work</h2>
+        <small>Internships, part-time roles, and paid engineering work</small>
+      </div>
+
+      <div class="grid">
+        <!-- Template work card (replace text with your real role) -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Mechanical Engineering Co-op</h3>
+              <p class="where">Netgear • Richmond, B.C.</p>
+            </div>
+            <div class="dates">May 2025 – December 2025</div>
+          </div>
+          <div class="cardBody">
+              <ul>
+                <li>Designed and FEA-validated custom PCB assembly tooling in Creo, reducing assembly time by 15% while improving operator ergonomics and manufacturing consistency.</li>
+                <li>Developed a vacuum-assisted screen assembly system using relays and venturi-based pneumatics, increasing production speed by 10% and reducing material waste.</li>
+                <li>Created standardized CFD/FEA thermal simulation workflows to analyze mobile device hotspots, enabling faster in-house design iteration and improved thermal validation.</li>
+                <li>Designed and released production-ready optical light pipes, performing DFMA and injection molding analysis to ensure manufacturability, tooling feasibility, and regulatory compliance.</li>
+                <li>Generated detailed CAD models and engineering drawings in Creo, collaborating cross-functionally with electrical, manufacturing, and compliance teams from prototype through production.</li>
+              </ul>
+
+            <div class="skillsRow" aria-label="Skills">
+                <span class="tag">Creo CAD</span>
+                <span class="tag">FEA</span>
+                <span class="tag">CFD</span>
+                <span class="tag">DFMA</span>
+                <span class="tag">Injection Molding</span>
+                <span class="tag">Thermal Analysis</span>
+                <span class="tag">Pneumatics</span>
+                <span class="tag">GD&amp;T</span>
+                <span class="tag">Manufacturing Tooling</span>
+                <span class="tag">Prototyping</span>
+                <span class="tag">Cross-Functional Collaboration</span>
+                <span class="tag">Regulatory Compliance</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more Work cards by copy/pasting this block -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Pharmacy Assistant and Cashier</h3>
+              <p class="where">Alert Bay Drugs • Alert Bay, B.C.</p>
+            </div>
+            <div class="dates">July 2017 – September 2025</div>
+          </div>
+          <div class="cardBody">
+              <ul>
+                <li>Digitized freight receiving and inventory tracking, improving stock accuracy, traceability, and front-store replenishment efficiency.</li>
+                <li>Designed and built a website to support store visibility and customer access to services and contact information.</li>
+                <li>Assisted in preparing, charging, and delivering prescriptions, supporting accurate dispensing workflows and patient service under pharmacy supervision.</li>
+                <li>Managed front-store operations as a cashier and freight stocker, maintaining product availability, merchandising standards, and a positive customer experience.</li>
+              </ul>
+            <div class="skillsRow" aria-label="Skills">
+                <span class="tag">Inventory Management</span>
+                <span class="tag">Process Digitization</span>
+                <span class="tag">Customer Service</span>
+                <span class="tag">Prescription Support</span>
+                <span class="tag">Web Design</span>
+                <span class="tag">Point-of-Sale</span>
+                <span class="tag">Logistics</span>
+                <span class="tag">Accuracy &amp; Compliance</span>
+                <span class="tag">Communication</span>
+            </div>
+          </div>
+        </article>
+    
+    <!-- Add more Work cards by copy/pasting this block -->
+    <article class="card">
+      <div class="cardHead">
+        <div>
+          <h3 class="role">Literacy and Numeracy Coach</h3>
+          <p class="where">Cheslakees Elementary • Port Mcneill, B.C.</p>
+        </div>
+        <div class="dates">September 2019 – June 2020</div>
+      </div>
+      <div class="cardBody">
+          <ul>
+            <li>Supported kindergarten instruction across two classrooms (60 students), reinforcing early literacy and numeracy through small-group and one-on-one coaching.</li>
+            <li>Delivered individualized support in spelling, early reading, and foundational math skills, adapting approaches to student learning styles and confidence levels.</li>
+            <li>Collaborated with classroom teachers to align learning activities, track progress, and adjust support strategies based on student needs.</li>
+            <li>Fostered a positive learning environment that built student confidence, engagement, and participation in early academic development.</li>
+          </ul>
+        <div class="skillsRow" aria-label="Skills">
+            <span class="tag">Teaching</span>
+            <span class="tag">Mentoring</span>
+            <span class="tag">Individualized Instruction</span>
+            <span class="tag">Learning Assessment</span>
+            <span class="tag">Confidence Building</span>
+            <span class="tag">Classroom Collaboration</span>
+            <span class="tag">Community Engagement</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <!-- ===================== DESIGN TEAMS ===================== -->
+    <section class="section" id="design-teams" aria-label="Design team experience">
+      <div class="sectionHead">
+        <h2>Design Teams</h2>
+        <small>Student design teams</small>
+      </div>
+
+      <div class="grid">
+        <!-- UBC Thunder Bikes role (edit dates/details as needed) -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Mechanical Team Lead</h3>
+              <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
+            </div>
+            <div class="dates">April 2025 – Present</div>
+          </div>
+          <div class="cardBody">
+              <ul>
+                  <li>Leading preparation of a ground-up motorcycle design for the MotoStudent International competition (Spain, 2027), developing system architecture, design milestones, and validation plans.</li>
+                <li>Leading and mentored a 20-member mechanical team, training new members in CAD, manufacturing processes, and engineering best practices across chassis, cooling, battery, and suspension sub-teams.</li>
+                <li>Directing end-to-end system development (concept → design → build → test → iterate), coordinating schedules, deliverables, and technical reviews to meet competition and project deadlines.</li>
+                <li>Ran CFD/FEA thermal simulations to optimize battery plate and cooling system designs, improving thermal performance, reliability, and safety under race conditions.</li>
+                <li>Designed, fabricated, and welded frame prototypes, validating manufacturability and structural performance through hands-on testing and iteration.</li>
+                <li>Collaborated cross-functionally with electrical, controls, and manufacturing teams to align system integration, packaging, and performance requirements.</li>
+              </ul>
+            <div class="skillsRow" aria-label="Skills">
+                <span class="tag">Technical Leadership</span>
+                <span class="tag">Systems Engineering</span>
+                <span class="tag">Project Management</span>
+                <span class="tag">FEA</span>
+                <span class="tag">CFD</span>
+                <span class="tag">Vehicle Design</span>
+                <span class="tag">Welding</span>
+                <span class="tag">Design Reviews</span>
+                <span class="tag">Validation &amp; Testing</span>
+                <span class="tag">Cross-Team Coordination</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Second design team card placeholder -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Battery/Thermal Cooling Lead</h3>
+              <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
+            </div>
+            <div class="dates">September 2024 – April 2025</div>
+          </div>
+          <div class="cardBody">
+              <ul>
+                <li>Led a 4-person subteam to design and manufacture a liquid cooling circuit and custom barbs, increasing system heat rejection to 16 kW (+41% YoY).</li>
+                <li>Designed and validated battery cooling plates, achieving 8 kW heat removal and reduced thermal gradients by modeling heat transfer in Python and MATLAB.</li>
+                <li>Developed CFD/FEA models in ANSYS Fluent/Mechanical to analyze airflow, conduction paths, and thermal performance, guiding geometry and material selection.</li>
+                <li>Coordinated fabrication and integration of cooling components, ensuring fit, serviceability, and safe operation within the battery enclosure.</li>
+              </ul>
+            <div class="skillsRow" aria-label="Skills">
+                <span class="tag">Thermal Management</span>
+                <span class="tag">Heat Transfer</span>
+                <span class="tag">CFD</span>
+                <span class="tag">FEA</span>
+                <span class="tag">Python</span>
+                <span class="tag">MATLAB</span>
+                <span class="tag">Liquid Cooling</span>
+                <span class="tag">Battery Safety</span>
+                <span class="tag">Design Optimization</span>
+            </div>
+          </div>
+        </article>
+    
+    <!-- Second design team card placeholder -->
+    <article class="card">
+      <div class="cardHead">
+        <div>
+          <h3 class="role">General Member</h3>
+          <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
+        </div>
+        <div class="dates">September 2023 – April 2024</div>
+      </div>
+      <div class="cardBody">
+          <ul>
+            <li>Designed, manufactured, and assembled the battery enclosure for the team’s first motorcycle iteration, ensuring structural integrity, electrical isolation, and serviceability.</li>
+            <li>Contributed to hands-on fabrication across chassis, cooling, and battery systems, including CAD modeling, welding, machining, and 3D printing.</li>
+            <li>Supported prototype testing and competition preparation, contributing to a first-place finish in the Lightweight class at the 2024 Monterey MotoFest.</li>
+            <li>Collaborated with electrical and mechanical leads to integrate systems, resolve packaging constraints, and improve reliability and maintainability.</li>
+          </ul>
+        <div class="skillsRow" aria-label="Skills">
+            <span class="tag">CAD Modeling</span>
+            <span class="tag">Fabrication</span>
+            <span class="tag">Welding</span>
+            <span class="tag">Machining</span>
+            <span class="tag">3D Printing</span>
+            <span class="tag">Assembly</span>
+            <span class="tag">Testing</span>
+            <span class="tag">Team Collaboration</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <!-- ===================== VOLUNTEERING ===================== -->
+    <section class="section" id="volunteering" aria-label="Volunteering experience">
+      <div class="sectionHead">
+        <h2>Volunteering</h2>
+        <small>Community leadership, service, and health-focused initiatives</small>
+      </div>
+
+      <div class="grid">
+        <!-- FIMRC role -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Executive Leadership — Student Chapter (Secretary → VP → President → Treasurer)</h3>
+              <p class="where">FIMRC UBC Chapter • Vancouver, BC</p>
+            </div>
+            <div class="dates">September 2022 – Present</div>
+          </div>
+          <div class="cardBody">
+              <ul>
+                <li>Progressed through four executive roles over four years, shaping chapter strategy, operations, and financial stewardship for a student organization focused on global healthcare access.</li>
+                <li>Grew active membership by 300% as President and led fundraising efforts raising $4,500+ since 2022 to support international medical relief and local outreach initiatives.</li>
+                <li>Managed budgeting, partnerships, and event programming to strengthen chapter sustainability, visibility, and long-term impact.</li>
+                <li>Volunteered internationally as a First Responder in Costa Rica, Ecuador, and Peru, supporting vaccination efforts and delivering health and safety training in community and clinical settings.</li>
+              </ul>
+            <div class="skillsRow" aria-label="Skills">
+                <span class="tag">Strategic Leadership</span>
+                <span class="tag">Fundraising</span>
+                <span class="tag">Budgeting</span>
+                <span class="tag">Team Building</span>
+                <span class="tag">Partnerships</span>
+                <span class="tag">Event Planning</span>
+                <span class="tag">Public Speaking</span>
+                <span class="tag">Stakeholder Engagement</span>
+            </div>
+          </div>
+        </article>
+        
+            <!-- FAST role -->
+            <article class="card">
+              <div class="cardHead">
+                <div>
+                  <h3 class="role">Director of Clinical Care</h3>
+                  <p class="where">UBC First Aid Student Team • Vancouver, BC</p>
+                </div>
+                <div class="dates">August 2025 – Present</div>
+              </div>
+              <div class="cardBody">
+                  <ul>
+                    <li>Founded and led the Clinical Care program, establishing the team’s medical governance, scope of practice, and operational framework.</li>
+                    <li>Authored medical protocols and liability waivers to ensure regulatory alignment, risk management, and safe field deployment.</li>
+                    <li>Organized and administered naloxone training and a First Responder bootcamp, certifying team members in emergency response and patient safety.</li>
+                    <li>Coordinated with UBC Campus Security to prepare the team for joint emergency response operations beginning in Spring 2026.</li>
+                  </ul>
+                <div class="skillsRow" aria-label="Skills">
+                    <span class="tag">Emergency Response</span>
+                    <span class="tag">Medical Protocols</span>
+                    <span class="tag">Risk Management</span>
+                    <span class="tag">Training &amp; Instruction</span>
+                    <span class="tag">Regulatory Compliance</span>
+                    <span class="tag">Program Development</span>
+                    <span class="tag">Interagency Coordination</span>
+                    <span class="tag">Safety Systems</span>
+                </div>
+              </div>
+            </article>
+
+        <!-- First responder / instructor role -->
+        <article class="card">
+          <div class="cardHead">
+            <div>
+              <h3 class="role">Certified First Responder & First Aid Instructor</h3>
+              <p class="where">International Volunteer Experience • Various</p>
+            </div>
+            <div class="dates">2023 – Present</div>
+          </div>
+          <div class="cardBody">
+            <ul>
+              <li>Delivered training and support in high-responsibility environments with an emphasis on calm decision-making.</li>
+              <li>Adapted instruction to different audiences; ensured safety, clarity, and confidence under pressure.</li>
+              <li>Contributed to community outcomes through consistent volunteering and preparedness-focused education.</li>
+            </ul>
+            <div class="skillsRow" aria-label="Skills">
+              <span class="tag">Teaching</span>
+              <span class="tag">Emergency Response</span>
+              <span class="tag">Teamwork</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    
+    <!-- club mech role -->
+    <article class="card">
+      <div class="cardHead">
+        <div>
+          <h3 class="role">Secretary</h3>
+          <p class="where">Club Mech • Vancouver, BC</p>
+        </div>
+        <div class="dates">August 2025 – Present</div>
+      </div>
+      <div class="cardBody">
+          <ul>
+            <li>Serve as Secretary for the Mechanical Engineering student club, managing meeting records, communications, and organizational documentation.</li>
+            <li>Design graphics and promotional materials to support events, workshops, and student engagement initiatives.</li>
+            <li>Volunteer at academic and social events, providing logistical support and student-facing assistance to strengthen community and participation within the Mechanical Engineering program.</li>
+          </ul>
+        <div class="skillsRow" aria-label="Skills">
+            <span class="tag">Communication</span>
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Event Support</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Student Engagement</span>
+            <span class="tag">Team Coordination</span>
+        </div>
+      </div>
+    </article>
+    
+    <!-- ubcdc -->
+    <article class="card">
+      <div class="cardHead">
+        <div>
+          <h3 class="role">Executive Leadership — Secretary → External VP</h3>
+          <p class="where">Club Mech • Vancouver, BC</p>
+        </div>
+        <div class="dates">September 2022 – April 2025</div>
+      </div>
+      <div class="cardBody">
+          <ul>
+            <li>Progressed from General Member to Secretary to External Vice President, taking on increasing responsibility for operations, communications, and external partnerships.</li>
+            <li>Led external relations and partnership development, coordinating with sponsors, student organizations, and industry partners to expand event reach and professional engagement.</li>
+            <li>Managed organizational communications and documentation, maintaining meeting records, outreach materials, and stakeholder correspondence.</li>
+            <li>Planned and supported professional development and networking events, facilitating student participation and cross-organization collaboration.</li>
+          </ul>
+        <div class="skillsRow" aria-label="Skills">
+            <span class="tag">Leadership Progression</span>
+            <span class="tag">External Relations</span>
+            <span class="tag">Partnership Development</span>
+            <span class="tag">Event Planning</span>
+            <span class="tag">Professional Communication</span>
+            <span class="tag">Organizational Management</span>
+            <span class="tag">Stakeholder Engagement</span>
+            <span class="tag">Public Speaking</span>
+            <span class="tag">Team Coordination</span>
+            <span class="tag">Strategic Outreach</span>
+
+        </div>
+      </div>
+    </article>
+    
+
+    <footer class="site-footer">© Lyra Fletcher 2026</footer>
+  </div>
+</body>
+</html>
+
