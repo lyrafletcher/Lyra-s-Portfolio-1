@@ -1,0 +1,1 @@
+Add your photos here using the names in PHOTO-GUIDE.md. They will automatically appear in the preview. For React also copy photos into public/images/.

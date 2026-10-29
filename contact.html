@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Get in Touch — Lyra Fletcher</title><style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+:root{font-family:Jost,Arial,sans-serif;color:#f4dfb9;background:#210812;font-synthesis:none}*{box-sizing:border-box}body{margin:0} .landing{height:100svh;min-height:480px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 12%,#602039 0%,transparent 58%),radial-gradient(ellipse at 16% 100%,#3e0d25,transparent 48%),linear-gradient(110deg,#1a0710,#360a21 70%,#260915)}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}.trace{fill:none;stroke:#e9b45b;stroke-width:1.85;stroke-linejoin:miter;stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px rgba(255,197,97,.9)) drop-shadow(0 0 7px rgba(255,161,55,.55));stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s)}.terminal{fill:#eebc67;filter:drop-shadow(0 0 3px #ffdd9c) drop-shadow(0 0 9px rgba(255,180,65,.72))}.signal{fill:#f5c76c;filter:drop-shadow(0 0 3px #ffdc96) drop-shadow(0 0 8px rgba(255,180,65,.6))}.signal:nth-of-type(even){fill:none;stroke:#f2bd65;stroke-width:1.5}.gear-outline{fill:none;stroke:#e7bc80;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}.gear-inner{fill:none;stroke:#d8ac76;stroke-width:1.15;vector-effect:non-scaling-stroke;opacity:.7}.gear-spin{animation:spin 34s linear infinite;transform-origin:0px 0px}.engineer-lines{fill:none;stroke:#d7a67f;stroke-width:1.1;opacity:.33;vector-effect:non-scaling-stroke}.engineer-lines path{stroke-width:1.4}@keyframes draw{to{stroke-dashoffset:0}}@keyframes spin{to{rotate:360deg}}.intro{position:absolute;left:7.2%;top:20.3%;width:43%;}.name{font-size:clamp(18px,2.02vw,36px);letter-spacing:.45em;white-space:nowrap;font-weight:300;margin:0 0 14px}.name-rule{width:min(470px,91%);height:1px;background:#d6a75c;position:relative}.name-rule:after{content:'';position:absolute;right:-3px;top:-3px;width:6px;height:6px;border:1px solid #d3a05a;border-radius:50%;background:#2e1020}.major{margin:17px 0 1px;font-size:clamp(11px,.95vw,17px);letter-spacing:.28em;color:#d7a6a0}.tags{margin:1px 0;font-size:clamp(9px,.72vw,14px);letter-spacing:.3em;color:#bb858b}.menu{position:absolute;inset:0;pointer-events:none}.nav-link{pointer-events:auto;position:absolute;left:8.7%;top:var(--y);transform:translateY(-50%);font-size:clamp(10px,.94vw,15px);letter-spacing:.26em;text-decoration:none;color:#efd4ae;font-weight:400;white-space:nowrap;transition:color .25s,text-shadow .25s,letter-spacing .25s}.nav-link:hover,.nav-link:focus-visible{color:#fff3cb;text-shadow:0 0 12px #ffc16f;letter-spacing:.3em;outline-offset:7px}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}
+/* Aspect-ratio-aware artwork: on narrow portrait screens, retain the designed canvas and pan to keep links readable. */
+@media(max-aspect-ratio:1/1){.landing{min-height:650px}.hero-art{width:155%;height:100%;left:-2%;}.intro{top:19%;left:8%;width:88%}.name{font-size:clamp(17px,4.1vw,30px);letter-spacing:.31em}.major{font-size:11px}.tags{font-size:9px}.nav-link{left:12%;font-size:11px;letter-spacing:.14em}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}}
+@media(prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
+.wire-glow{fill:none;stroke:#ffb64c;stroke-width:7;opacity:.65;stroke-linejoin:miter;stroke-linecap:round;pointer-events:none}.wire-glow path{vector-effect:non-scaling-stroke}
+
+
+/* Version 18: glow uses the same progressive stroke reveal as the actual trace. */
+.wire-glow{stroke:#ffae40;stroke-width:9;opacity:.85;fill:none;pointer-events:none}
+.glow-trace{fill:none;stroke:#ffb348;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s);vector-effect:non-scaling-stroke}
+.trace{stroke:#ffd07b;stroke-width:2.15;filter:drop-shadow(0 0 2px rgba(255,213,125,.9))}
+.gear-outline{stroke:#ffd48c;stroke-width:2.05;filter:drop-shadow(0 0 4px rgba(255,177,62,.9))}
+.gear-inner{stroke:#dcb879;opacity:.85}
+.gear-rim{fill:none;stroke:#f4bc65;stroke-width:1.15;opacity:.64;vector-effect:non-scaling-stroke}
+.gear-fine{fill:none;stroke:#ffda98;stroke-width:.8;opacity:.5;vector-effect:non-scaling-stroke}
+.gear-halo{fill:none;stroke:#f2a944;stroke-width:6;opacity:.6;filter:drop-shadow(0 0 9px #ff9f30);vector-effect:non-scaling-stroke}
+@media(prefers-reduced-motion:reduce){.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* V20: faster synchronized circuit reveal; gear embellishments */
+.trace,.glow-trace{animation-duration:2.05s;animation-timing-function:cubic-bezier(.35,.05,.58,1);animation-delay:calc(var(--i)*.075s)}
+.gear-spin{animation-duration:42s}
+.gear-metal{fill:url(#gearBronze);stroke:#ffc978;stroke-width:1.6;opacity:.24;vector-effect:non-scaling-stroke}
+.gear-etched{fill:none;stroke:#ffdc9d;stroke-width:1;opacity:.62;vector-effect:non-scaling-stroke}
+.gear-accent{fill:none;stroke:#ffc774;stroke-width:2;opacity:.74;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px rgba(255,174,58,.75))}
+.gear-studs{fill:#f8d398;filter:drop-shadow(0 0 4px #ffc16e)}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
+
+/* V21: quicker synchronized reveal and brighter gear outline */
+.trace,.glow-trace{animation-duration:1.25s;animation-timing-function:cubic-bezier(.25,.08,.45,1);animation-delay:calc(var(--i)*.012s)}
+.gear-outline{stroke:#ffe5a5;stroke-width:3.2;filter:drop-shadow(0 0 3px rgba(255,218,140,.95)) drop-shadow(0 0 10px rgba(255,163,44,.85))}
+.gear-accent{stroke:#ffdc91;stroke-width:2.6;opacity:.95;filter:drop-shadow(0 0 7px rgba(255,171,54,.9))}
+.gear-rim{stroke:#ffd38a;opacity:.85}
+.gear-halo{stroke:#ffbf58;opacity:.82}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v23: smoother motion and 25% softer circuit glow. */
+.trace,.glow-trace{animation-timing-function:cubic-bezier(.45,0,.55,1);animation-duration:1.25s;animation-delay:calc(var(--i)*.012s)}
+.wire-glow{opacity:.6375}
+.glow-trace{opacity:.75}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.675))}
+.gear-halo{opacity:.615}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v24: constant-speed, frame-friendly circuit reveal.
+   Linear dash progression avoids the noticeable easing surge at corners. */
+.trace,.glow-trace{animation-timing-function:linear;animation-duration:1.25s;animation-delay:calc(var(--i)*.012s);will-change:stroke-dashoffset}
+
+/* v25: higher-resolution SVG stroke reveal and gentle endpoint easing. */
+.trace,.glow-trace{stroke-dasharray:1000;stroke-dashoffset:1000;animation-name:draw;animation-duration:1.25s;animation-timing-function:cubic-bezier(.32,.02,.68,.98);animation-delay:calc(var(--i)*.012s);will-change:auto}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+
+/* v26 — align name rule with name, improve line spacing and softer continuous illumination */
+.intro{width:max-content;max-width:90%}
+.name-rule{width:100%;max-width:none}
+.trace,.glow-trace{animation-duration:1.4s;animation-timing-function:cubic-bezier(.4,0,.6,1);animation-delay:calc(var(--i)*.008s)}
+.wire-glow{opacity:.76}
+.glow-trace{opacity:.82}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.78))}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v27: name underline powers on from left to right, with a restrained amber glow. */
+.name-rule{background:transparent;isolation:isolate}
+.name-rule::before{content:"";position:absolute;inset:0;background:#ffd080;box-shadow:0 0 4px rgba(255,202,110,.8),0 0 11px rgba(255,166,62,.53),0 0 19px rgba(255,151,52,.2);transform-origin:left center;transform:scaleX(0);animation:namePower 1.25s cubic-bezier(.32,.02,.68,.98) .08s both}
+.name-rule::after{opacity:0;animation:nameTerminal .18s ease-out 1.28s forwards;box-shadow:0 0 5px rgba(255,194,93,.65)}
+@keyframes namePower{to{transform:scaleX(1)}}
+@keyframes nameTerminal{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.name-rule::before,.name-rule::after{animation:none;transform:none;opacity:1}}
+
+/* V28 interior pages. The approved V27 homepage rules above are not modified. */
+#portfolio-page{display:none}.page-open .landing{display:none}.page-open #portfolio-page{display:block}.page-open{background:#210913;color:#f6e5c6}#portfolio-page{min-height:100svh;background:radial-gradient(ellipse at 100% 0%,#542039 0%,transparent 45%),linear-gradient(135deg,#220912,#300d20 70%,#1b0812);color:#f3ddbb}#portfolio-page *{box-sizing:border-box}.page-shell{max-width:1600px;margin:auto;min-height:100svh;padding:0 clamp(24px,5.8vw,110px)}.page-top{display:flex;align-items:center;gap:38px;justify-content:space-between;padding:31px 0 27px;border-bottom:1px solid #a36a5669}.site-mark{font-size:14px;letter-spacing:.24em;color:#ffe0a6;text-decoration:none;white-space:nowrap}.site-mark span{color:#b27b64}.page-nav{display:flex;align-items:center;gap:clamp(13px,1.7vw,27px);flex-wrap:wrap}.page-nav a{font-size:10px;letter-spacing:.12em;text-decoration:none;color:#c5a4a0;transition:color .2s}.page-nav a:hover,.page-nav a.active{color:#ffdb93}.page-nav a.active{border-bottom:1px solid #e7b66c;padding-bottom:6px}.mobile-nav-toggle{display:none}.page-main{padding:clamp(45px,7vw,108px) 0 90px}.eyebrow{font-size:11px;letter-spacing:.24em;color:#e7b66c;font-weight:500}.page-heading{margin:0 0 clamp(42px,5vw,85px);max-width:980px}.page-heading h1{font-size:clamp(60px,9vw,145px);font-weight:300;letter-spacing:-.055em;line-height:.95;margin:23px 0 28px;color:#ffe5bc}.page-heading h1 em{font-style:normal;color:#c18e8d}.gold-dot{color:#eab866}.lead{font-size:clamp(17px,1.7vw,23px);line-height:1.65;color:#d6b8b1;max-width:790px;font-weight:300}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(35px,6vw,100px);align-items:center}.photo-slot{min-height:320px;position:relative;overflow:hidden;background:linear-gradient(145deg,#56243c,#250b1c 72%);border:1px solid #a36c6177;background-size:cover;background-position:center}.photo-slot:before,.photo-slot:after{content:'';position:absolute;width:42px;height:42px;border:1px solid #dda95c;opacity:.8}.photo-slot:before{top:17px;left:17px;border-right:0;border-bottom:0}.photo-slot:after{right:17px;bottom:17px;border-left:0;border-top:0}.photo-slot-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;padding:20px;color:#d7ac83;letter-spacing:.18em;font-size:11px}.photo-slot-inner small{font-size:11px;color:#b18d90;letter-spacing:.08em;max-width:90%}.photo-symbol{font-size:40px;color:#e1ac65}.photo-slot.has-photo .photo-slot-inner{display:none}.about-grid>.photo-slot{min-height:520px}.prose h2,.resume-hero h2{font-size:clamp(30px,3.4vw,52px);line-height:1.15;font-weight:300;color:#ffe4b8}.prose p,.resume-hero p{font-size:16px;line-height:1.9;color:#d2b5b0}.text-link{display:inline-block;color:#f2bd75;text-decoration:none;font-size:12px;letter-spacing:.15em;margin-top:20px;border-bottom:1px solid #e3aa68;padding-bottom:10px}.section-block{margin-top:115px}.feature-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}.feature-grid article,.skill-grid article{border-top:1px solid #ba866d;padding:25px 5px}.feature-grid b{color:#dfad72;font-weight:400}.feature-grid h3,.skill-grid h3{font-weight:400;font-size:21px;color:#fbe0b7}.feature-grid p,.skill-grid p{color:#cbaaa7;line-height:1.75}.projects-list{display:flex;flex-direction:column;gap:38px}.project-card{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(25px,4.5vw,75px);align-items:center;padding:0 0 40px;border-bottom:1px solid #9864536e}.project-photo .photo-slot{min-height:360px}.project-copy h2{font-size:clamp(30px,3.3vw,54px);font-weight:300;line-height:1.12;margin:20px 0;color:#ffe3b5}.project-copy>p,.timeline-body>p{font-size:16px;line-height:1.8;color:#d6b5b1}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}.chips span{font-size:11px;letter-spacing:.07em;color:#d9b3a5;border:1px solid #9564568a;border-radius:50px;padding:7px 11px}.details-button{font:inherit;font-size:11px;letter-spacing:.17em;color:#f4c078;border:0;border-bottom:1px solid #d7a46a;padding:10px 0;background:none;cursor:pointer}.details-button span{padding-left:10px}.project-details{padding:14px 0}.project-details li,.timeline-body li{color:#c9aca8;line-height:1.75;margin:7px 0}.timeline{border-top:1px solid #a77563}.timeline-item{display:grid;grid-template-columns:27% 1fr;gap:35px;border-bottom:1px solid #8f5e5a75;padding:48px 0}.timeline-date{color:#dcb276;font-size:12px;letter-spacing:.18em}.timeline-body h2{font-weight:300;font-size:clamp(34px,4vw,60px);margin:9px 0 0}.timeline-body h3{font-weight:400;color:#d9a4a0;font-size:17px;margin:10px 0 20px}.timeline-body ul{padding-left:20px}.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.award-card{padding:40px;background:#51203942;border:1px solid #a676635f;min-height:265px}.award-value{font-size:clamp(44px,5vw,76px);font-weight:300;color:#ffd99b;margin:18px 0}.award-card h2{font-size:21px;font-weight:400;margin:0}.award-card p{color:#cba9a5;line-height:1.7}.resume-hero{display:grid;grid-template-columns:1.5fr .5fr;gap:60px;border-top:1px solid #aa755f;padding-top:40px}.resume-stats{border-left:1px solid #a36c6177;padding-left:35px;display:flex;flex-direction:column;gap:30px}.resume-stats div{display:flex;flex-direction:column}.resume-stats strong{font-size:65px;color:#ffd9a0;font-weight:300}.resume-stats span{font-size:10px;letter-spacing:.13em;color:#c7a09d}.solid-link{display:inline-block;text-decoration:none;background:#f1c280;color:#29101c;padding:15px 21px;font-size:12px;letter-spacing:.13em;margin-top:23px}.resume-note,.contact-footer{color:#b18e92;font-size:13px;margin-top:35px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-tile{border:1px solid #a878667a;padding:35px;text-decoration:none;color:#f7dcb6;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}.contact-tile:hover{background:#60304865}.contact-tile h2{font-size:clamp(21px,2.5vw,38px);font-weight:300;overflow-wrap:anywhere}.contact-tile>span:last-child{font-size:11px;letter-spacing:.15em;color:#e7b66c}.page-footer{border-top:1px solid #9864536e;display:flex;justify-content:space-between;gap:20px;padding:25px 0 35px;font-size:10px;letter-spacing:.15em;color:#ad888a}.page-footer a{color:#e8b77b;text-decoration:none}@media(max-width:950px){.page-top{flex-wrap:wrap}.page-nav{width:100%;justify-content:space-between}.page-nav a{font-size:9px}.about-grid,.project-card{grid-template-columns:1fr}.project-photo .photo-slot{min-height:300px}.about-grid>.photo-slot{min-height:350px}.resume-hero{grid-template-columns:1fr}.resume-stats{flex-direction:row;border-left:0;border-top:1px solid #a36c6177;padding:25px 0 0}.feature-grid,.skill-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-shell{padding:0 22px}.page-top{padding:22px 0}.mobile-nav-toggle{display:block;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em}.page-nav{display:none;flex-direction:column;align-items:flex-start;gap:15px;padding-top:16px}.page-nav.show{display:flex}.page-heading h1{font-size:clamp(55px,14vw,90px)}.feature-grid,.skill-grid,.awards-grid,.contact-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:14px}.resume-stats strong{font-size:43px}.resume-stats{gap:20px}.page-footer{flex-direction:column}.project-photo .photo-slot{min-height:250px}}
+
+
+/* Final release — case study image galleries */
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0 4px}
+.project-gallery figure{margin:0;border:1px solid rgba(237,185,105,.22);background:rgba(22,7,16,.35);overflow:hidden}
+.project-gallery img{display:block;width:100%;height:220px;object-fit:cover;object-position:center;background:#2c1524}
+.project-gallery figcaption{padding:10px 13px 13px;font-size:12px;line-height:1.55;color:#d8bb9b;letter-spacing:.015em}
+.project-details ul{padding-left:20px}.project-details li{margin-bottom:11px;line-height:1.7}
+.project-photo .photo-slot.has-photo{background-position:center;background-size:cover}
+@media(max-width:720px){.project-gallery{grid-template-columns:1fr}.project-gallery img{height:230px}}
+
+/* Standalone static pages: navigation works without JavaScript. */
+.case-details{margin-top:6px}
+.case-details>summary{display:inline-block;list-style:none;user-select:none}
+.case-details>summary::-webkit-details-marker{display:none}
+.case-details[open]>summary{margin-bottom:12px}
+.case-details[open]>summary span{display:none}
+.case-details[open]>summary::after{content:"  −"}
+.mobile-menu{display:none}
+.mobile-menu summary{display:inline-block;cursor:pointer;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em;list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu-links{position:absolute;z-index:20;right:22px;left:22px;top:calc(100% - 4px);padding:20px;display:flex;flex-direction:column;gap:16px;border:1px solid #a6766370;background:#321224;box-shadow:0 12px 32px #1a071078}
+.page-top{position:relative}
+.mobile-menu-links a{color:#f5dcb3;letter-spacing:.12em;text-decoration:none;font-size:12px}
+@media(max-width:620px){.mobile-menu{display:block}.page-nav{display:none}}
+
+
+/* Readability & navigation refresh: applied to interior pages only. */
+.page-main{font-size:clamp(16px,1.08vw,18px);line-height:1.72}
+.page-main p,.page-main li{font-size:clamp(16px,1.04vw,18px);line-height:1.78}
+.page-main .eyebrow,.page-main .section-caption{font-size:12px;line-height:1.6}
+.page-main .chips span{font-size:13px;line-height:1.45}
+.page-main .project-card{margin-bottom:36px;padding-bottom:42px;scroll-margin-top:106px}
+.page-main .project-card h2{font-size:clamp(28px,3vw,48px);line-height:1.16}
+.page-main .project-card p{max-width:68ch}
+.page-main .project-details li{margin:0 0 14px}
+.page-main .project-gallery figcaption{font-size:13px}
+.page-main .work-entry{scroll-margin-top:100px}
+.project-directory{margin:26px 0 65px;padding:26px;border:1px solid rgba(237,185,105,.28);background:rgba(27,6,19,.46);border-radius:6px}
+.project-directory h2{font-size:clamp(22px,2.2vw,32px);font-weight:400;margin:0 0 9px;color:#ffe1ae}
+.project-directory>p{margin:0 0 22px;color:#d9b4ae}
+.project-directory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.project-directory-grid a{display:flex;flex-direction:column;justify-content:center;gap:5px;text-decoration:none;border:1px solid rgba(237,185,105,.25);padding:14px 15px;background:rgba(128,58,72,.10);color:#f6dab0;line-height:1.3;font-size:16px;transition:background .2s,border-color .2s}
+.project-directory-grid a:hover,.project-directory-grid a:focus-visible{background:rgba(210,130,78,.17);border-color:#e7bc80}
+.project-directory-grid a small{font-size:12px;color:#cfaaa7}
+.page-main .award-card p{font-size:16px}
+.award-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.award-links a{display:inline-flex;padding:10px 14px;border:1px solid rgba(237,185,105,.55);border-radius:3px;color:#f9d59b;text-decoration:none;font-size:14px;font-weight:500;line-height:1.3;letter-spacing:.01em}
+.award-links a:hover{background:#75445155}
+@media(max-width:900px){.project-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.project-directory{padding:18px}.project-directory-grid{grid-template-columns:1fr}.page-main{font-size:16px}}
+</style></head><body class="page-open"><section id="portfolio-page"><div class="page-shell"><header class="page-top"><a class="site-mark" href="./preview.html">LF<span> / </span>LYRA FLETCHER</a><nav aria-label="Portfolio navigation" class="page-nav"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a aria-current="page" class="active" href="./contact.html">GET IN TOUCH</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile portfolio navigation" class="mobile-menu-links"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a href="./contact.html">GET IN TOUCH</a></nav></details></header><main class="page-main"><div class="page-heading"><span class="eyebrow">06 / START A CONVERSATION</span><h1>Get in <em>touch.</em></h1><p class="lead">Interested in robotics, mechatronics, medical technology, or building something ambitious? I'd love to connect.</p></div><div class="contact-grid"><a class="contact-tile" href="mailto:lyrafletcher@outlook.com"><span class="eyebrow">EMAIL</span><h2>lyrafletcher@outlook.com</h2><span>WRITE AN EMAIL ↗</span></a><a class="contact-tile" href="https://ca.linkedin.com/in/lyra-fletcher-ubc" rel="noopener noreferrer" target="_blank"><span class="eyebrow">PROFESSIONAL NETWORK</span><h2>LinkedIn</h2><span>VIEW PROFILE ↗</span></a></div><p class="contact-footer">Based in Vancouver, British Columbia · University of British Columbia</p></main><footer class="page-footer"><span>© 2026 LYRA FLETCHER</span><span>MECHANICAL ENGINEERING · MECHATRONICS</span><a href="./preview.html">BACK TO HOME ↑</a></footer></div></section></body></html>

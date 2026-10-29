@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Personal Projects — Lyra Fletcher</title><style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+:root{font-family:Jost,Arial,sans-serif;color:#f4dfb9;background:#210812;font-synthesis:none}*{box-sizing:border-box}body{margin:0} .landing{height:100svh;min-height:480px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 12%,#602039 0%,transparent 58%),radial-gradient(ellipse at 16% 100%,#3e0d25,transparent 48%),linear-gradient(110deg,#1a0710,#360a21 70%,#260915)}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}.trace{fill:none;stroke:#e9b45b;stroke-width:1.85;stroke-linejoin:miter;stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px rgba(255,197,97,.9)) drop-shadow(0 0 7px rgba(255,161,55,.55));stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s)}.terminal{fill:#eebc67;filter:drop-shadow(0 0 3px #ffdd9c) drop-shadow(0 0 9px rgba(255,180,65,.72))}.signal{fill:#f5c76c;filter:drop-shadow(0 0 3px #ffdc96) drop-shadow(0 0 8px rgba(255,180,65,.6))}.signal:nth-of-type(even){fill:none;stroke:#f2bd65;stroke-width:1.5}.gear-outline{fill:none;stroke:#e7bc80;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}.gear-inner{fill:none;stroke:#d8ac76;stroke-width:1.15;vector-effect:non-scaling-stroke;opacity:.7}.gear-spin{animation:spin 34s linear infinite;transform-origin:0px 0px}.engineer-lines{fill:none;stroke:#d7a67f;stroke-width:1.1;opacity:.33;vector-effect:non-scaling-stroke}.engineer-lines path{stroke-width:1.4}@keyframes draw{to{stroke-dashoffset:0}}@keyframes spin{to{rotate:360deg}}.intro{position:absolute;left:7.2%;top:20.3%;width:43%;}.name{font-size:clamp(18px,2.02vw,36px);letter-spacing:.45em;white-space:nowrap;font-weight:300;margin:0 0 14px}.name-rule{width:min(470px,91%);height:1px;background:#d6a75c;position:relative}.name-rule:after{content:'';position:absolute;right:-3px;top:-3px;width:6px;height:6px;border:1px solid #d3a05a;border-radius:50%;background:#2e1020}.major{margin:17px 0 1px;font-size:clamp(11px,.95vw,17px);letter-spacing:.28em;color:#d7a6a0}.tags{margin:1px 0;font-size:clamp(9px,.72vw,14px);letter-spacing:.3em;color:#bb858b}.menu{position:absolute;inset:0;pointer-events:none}.nav-link{pointer-events:auto;position:absolute;left:8.7%;top:var(--y);transform:translateY(-50%);font-size:clamp(10px,.94vw,15px);letter-spacing:.26em;text-decoration:none;color:#efd4ae;font-weight:400;white-space:nowrap;transition:color .25s,text-shadow .25s,letter-spacing .25s}.nav-link:hover,.nav-link:focus-visible{color:#fff3cb;text-shadow:0 0 12px #ffc16f;letter-spacing:.3em;outline-offset:7px}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}
+/* Aspect-ratio-aware artwork: on narrow portrait screens, retain the designed canvas and pan to keep links readable. */
+@media(max-aspect-ratio:1/1){.landing{min-height:650px}.hero-art{width:155%;height:100%;left:-2%;}.intro{top:19%;left:8%;width:88%}.name{font-size:clamp(17px,4.1vw,30px);letter-spacing:.31em}.major{font-size:11px}.tags{font-size:9px}.nav-link{left:12%;font-size:11px;letter-spacing:.14em}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}}
+@media(prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
+.wire-glow{fill:none;stroke:#ffb64c;stroke-width:7;opacity:.65;stroke-linejoin:miter;stroke-linecap:round;pointer-events:none}.wire-glow path{vector-effect:non-scaling-stroke}
+
+
+/* Version 18: glow uses the same progressive stroke reveal as the actual trace. */
+.wire-glow{stroke:#ffae40;stroke-width:9;opacity:.85;fill:none;pointer-events:none}
+.glow-trace{fill:none;stroke:#ffb348;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s);vector-effect:non-scaling-stroke}
+.trace{stroke:#ffd07b;stroke-width:2.15;filter:drop-shadow(0 0 2px rgba(255,213,125,.9))}
+.gear-outline{stroke:#ffd48c;stroke-width:2.05;filter:drop-shadow(0 0 4px rgba(255,177,62,.9))}
+.gear-inner{stroke:#dcb879;opacity:.85}
+.gear-rim{fill:none;stroke:#f4bc65;stroke-width:1.15;opacity:.64;vector-effect:non-scaling-stroke}
+.gear-fine{fill:none;stroke:#ffda98;stroke-width:.8;opacity:.5;vector-effect:non-scaling-stroke}
+.gear-halo{fill:none;stroke:#f2a944;stroke-width:6;opacity:.6;filter:drop-shadow(0 0 9px #ff9f30);vector-effect:non-scaling-stroke}
+@media(prefers-reduced-motion:reduce){.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* V20: faster synchronized circuit reveal; gear embellishments */
+.trace,.glow-trace{animation-duration:2.05s;animation-timing-function:cubic-bezier(.35,.05,.58,1);animation-delay:calc(var(--i)*.075s)}
+.gear-spin{animation-duration:42s}
+.gear-metal{fill:url(#gearBronze);stroke:#ffc978;stroke-width:1.6;opacity:.24;vector-effect:non-scaling-stroke}
+.gear-etched{fill:none;stroke:#ffdc9d;stroke-width:1;opacity:.62;vector-effect:non-scaling-stroke}
+.gear-accent{fill:none;stroke:#ffc774;stroke-width:2;opacity:.74;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px rgba(255,174,58,.75))}
+.gear-studs{fill:#f8d398;filter:drop-shadow(0 0 4px #ffc16e)}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
+
+/* V21: quicker synchronized reveal and brighter gear outline */
+.trace,.glow-trace{animation-duration:1.25s;animation-timing-function:cubic-bezier(.25,.08,.45,1);animation-delay:calc(var(--i)*.012s)}
+.gear-outline{stroke:#ffe5a5;stroke-width:3.2;filter:drop-shadow(0 0 3px rgba(255,218,140,.95)) drop-shadow(0 0 10px rgba(255,163,44,.85))}
+.gear-accent{stroke:#ffdc91;stroke-width:2.6;opacity:.95;filter:drop-shadow(0 0 7px rgba(255,171,54,.9))}
+.gear-rim{stroke:#ffd38a;opacity:.85}
+.gear-halo{stroke:#ffbf58;opacity:.82}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v23: smoother motion and 25% softer circuit glow. */
+.trace,.glow-trace{animation-timing-function:cubic-bezier(.45,0,.55,1);animation-duration:1.25s;animation-delay:calc(var(--i)*.012s)}
+.wire-glow{opacity:.6375}
+.glow-trace{opacity:.75}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.675))}
+.gear-halo{opacity:.615}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v24: constant-speed, frame-friendly circuit reveal.
+   Linear dash progression avoids the noticeable easing surge at corners. */
+.trace,.glow-trace{animation-timing-function:linear;animation-duration:1.25s;animation-delay:calc(var(--i)*.012s);will-change:stroke-dashoffset}
+
+/* v25: higher-resolution SVG stroke reveal and gentle endpoint easing. */
+.trace,.glow-trace{stroke-dasharray:1000;stroke-dashoffset:1000;animation-name:draw;animation-duration:1.25s;animation-timing-function:cubic-bezier(.32,.02,.68,.98);animation-delay:calc(var(--i)*.012s);will-change:auto}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+
+/* v26 — align name rule with name, improve line spacing and softer continuous illumination */
+.intro{width:max-content;max-width:90%}
+.name-rule{width:100%;max-width:none}
+.trace,.glow-trace{animation-duration:1.4s;animation-timing-function:cubic-bezier(.4,0,.6,1);animation-delay:calc(var(--i)*.008s)}
+.wire-glow{opacity:.76}
+.glow-trace{opacity:.82}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.78))}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
+
+/* v27: name underline powers on from left to right, with a restrained amber glow. */
+.name-rule{background:transparent;isolation:isolate}
+.name-rule::before{content:"";position:absolute;inset:0;background:#ffd080;box-shadow:0 0 4px rgba(255,202,110,.8),0 0 11px rgba(255,166,62,.53),0 0 19px rgba(255,151,52,.2);transform-origin:left center;transform:scaleX(0);animation:namePower 1.25s cubic-bezier(.32,.02,.68,.98) .08s both}
+.name-rule::after{opacity:0;animation:nameTerminal .18s ease-out 1.28s forwards;box-shadow:0 0 5px rgba(255,194,93,.65)}
+@keyframes namePower{to{transform:scaleX(1)}}
+@keyframes nameTerminal{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.name-rule::before,.name-rule::after{animation:none;transform:none;opacity:1}}
+
+/* V28 interior pages. The approved V27 homepage rules above are not modified. */
+#portfolio-page{display:none}.page-open .landing{display:none}.page-open #portfolio-page{display:block}.page-open{background:#210913;color:#f6e5c6}#portfolio-page{min-height:100svh;background:radial-gradient(ellipse at 100% 0%,#542039 0%,transparent 45%),linear-gradient(135deg,#220912,#300d20 70%,#1b0812);color:#f3ddbb}#portfolio-page *{box-sizing:border-box}.page-shell{max-width:1600px;margin:auto;min-height:100svh;padding:0 clamp(24px,5.8vw,110px)}.page-top{display:flex;align-items:center;gap:38px;justify-content:space-between;padding:31px 0 27px;border-bottom:1px solid #a36a5669}.site-mark{font-size:14px;letter-spacing:.24em;color:#ffe0a6;text-decoration:none;white-space:nowrap}.site-mark span{color:#b27b64}.page-nav{display:flex;align-items:center;gap:clamp(13px,1.7vw,27px);flex-wrap:wrap}.page-nav a{font-size:10px;letter-spacing:.12em;text-decoration:none;color:#c5a4a0;transition:color .2s}.page-nav a:hover,.page-nav a.active{color:#ffdb93}.page-nav a.active{border-bottom:1px solid #e7b66c;padding-bottom:6px}.mobile-nav-toggle{display:none}.page-main{padding:clamp(45px,7vw,108px) 0 90px}.eyebrow{font-size:11px;letter-spacing:.24em;color:#e7b66c;font-weight:500}.page-heading{margin:0 0 clamp(42px,5vw,85px);max-width:980px}.page-heading h1{font-size:clamp(60px,9vw,145px);font-weight:300;letter-spacing:-.055em;line-height:.95;margin:23px 0 28px;color:#ffe5bc}.page-heading h1 em{font-style:normal;color:#c18e8d}.gold-dot{color:#eab866}.lead{font-size:clamp(17px,1.7vw,23px);line-height:1.65;color:#d6b8b1;max-width:790px;font-weight:300}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(35px,6vw,100px);align-items:center}.photo-slot{min-height:320px;position:relative;overflow:hidden;background:linear-gradient(145deg,#56243c,#250b1c 72%);border:1px solid #a36c6177;background-size:cover;background-position:center}.photo-slot:before,.photo-slot:after{content:'';position:absolute;width:42px;height:42px;border:1px solid #dda95c;opacity:.8}.photo-slot:before{top:17px;left:17px;border-right:0;border-bottom:0}.photo-slot:after{right:17px;bottom:17px;border-left:0;border-top:0}.photo-slot-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;padding:20px;color:#d7ac83;letter-spacing:.18em;font-size:11px}.photo-slot-inner small{font-size:11px;color:#b18d90;letter-spacing:.08em;max-width:90%}.photo-symbol{font-size:40px;color:#e1ac65}.photo-slot.has-photo .photo-slot-inner{display:none}.about-grid>.photo-slot{min-height:520px}.prose h2,.resume-hero h2{font-size:clamp(30px,3.4vw,52px);line-height:1.15;font-weight:300;color:#ffe4b8}.prose p,.resume-hero p{font-size:16px;line-height:1.9;color:#d2b5b0}.text-link{display:inline-block;color:#f2bd75;text-decoration:none;font-size:12px;letter-spacing:.15em;margin-top:20px;border-bottom:1px solid #e3aa68;padding-bottom:10px}.section-block{margin-top:115px}.feature-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}.feature-grid article,.skill-grid article{border-top:1px solid #ba866d;padding:25px 5px}.feature-grid b{color:#dfad72;font-weight:400}.feature-grid h3,.skill-grid h3{font-weight:400;font-size:21px;color:#fbe0b7}.feature-grid p,.skill-grid p{color:#cbaaa7;line-height:1.75}.projects-list{display:flex;flex-direction:column;gap:38px}.project-card{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(25px,4.5vw,75px);align-items:center;padding:0 0 40px;border-bottom:1px solid #9864536e}.project-photo .photo-slot{min-height:360px}.project-copy h2{font-size:clamp(30px,3.3vw,54px);font-weight:300;line-height:1.12;margin:20px 0;color:#ffe3b5}.project-copy>p,.timeline-body>p{font-size:16px;line-height:1.8;color:#d6b5b1}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}.chips span{font-size:11px;letter-spacing:.07em;color:#d9b3a5;border:1px solid #9564568a;border-radius:50px;padding:7px 11px}.details-button{font:inherit;font-size:11px;letter-spacing:.17em;color:#f4c078;border:0;border-bottom:1px solid #d7a46a;padding:10px 0;background:none;cursor:pointer}.details-button span{padding-left:10px}.project-details{padding:14px 0}.project-details li,.timeline-body li{color:#c9aca8;line-height:1.75;margin:7px 0}.timeline{border-top:1px solid #a77563}.timeline-item{display:grid;grid-template-columns:27% 1fr;gap:35px;border-bottom:1px solid #8f5e5a75;padding:48px 0}.timeline-date{color:#dcb276;font-size:12px;letter-spacing:.18em}.timeline-body h2{font-weight:300;font-size:clamp(34px,4vw,60px);margin:9px 0 0}.timeline-body h3{font-weight:400;color:#d9a4a0;font-size:17px;margin:10px 0 20px}.timeline-body ul{padding-left:20px}.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.award-card{padding:40px;background:#51203942;border:1px solid #a676635f;min-height:265px}.award-value{font-size:clamp(44px,5vw,76px);font-weight:300;color:#ffd99b;margin:18px 0}.award-card h2{font-size:21px;font-weight:400;margin:0}.award-card p{color:#cba9a5;line-height:1.7}.resume-hero{display:grid;grid-template-columns:1.5fr .5fr;gap:60px;border-top:1px solid #aa755f;padding-top:40px}.resume-stats{border-left:1px solid #a36c6177;padding-left:35px;display:flex;flex-direction:column;gap:30px}.resume-stats div{display:flex;flex-direction:column}.resume-stats strong{font-size:65px;color:#ffd9a0;font-weight:300}.resume-stats span{font-size:10px;letter-spacing:.13em;color:#c7a09d}.solid-link{display:inline-block;text-decoration:none;background:#f1c280;color:#29101c;padding:15px 21px;font-size:12px;letter-spacing:.13em;margin-top:23px}.resume-note,.contact-footer{color:#b18e92;font-size:13px;margin-top:35px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-tile{border:1px solid #a878667a;padding:35px;text-decoration:none;color:#f7dcb6;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}.contact-tile:hover{background:#60304865}.contact-tile h2{font-size:clamp(21px,2.5vw,38px);font-weight:300;overflow-wrap:anywhere}.contact-tile>span:last-child{font-size:11px;letter-spacing:.15em;color:#e7b66c}.page-footer{border-top:1px solid #9864536e;display:flex;justify-content:space-between;gap:20px;padding:25px 0 35px;font-size:10px;letter-spacing:.15em;color:#ad888a}.page-footer a{color:#e8b77b;text-decoration:none}@media(max-width:950px){.page-top{flex-wrap:wrap}.page-nav{width:100%;justify-content:space-between}.page-nav a{font-size:9px}.about-grid,.project-card{grid-template-columns:1fr}.project-photo .photo-slot{min-height:300px}.about-grid>.photo-slot{min-height:350px}.resume-hero{grid-template-columns:1fr}.resume-stats{flex-direction:row;border-left:0;border-top:1px solid #a36c6177;padding:25px 0 0}.feature-grid,.skill-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-shell{padding:0 22px}.page-top{padding:22px 0}.mobile-nav-toggle{display:block;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em}.page-nav{display:none;flex-direction:column;align-items:flex-start;gap:15px;padding-top:16px}.page-nav.show{display:flex}.page-heading h1{font-size:clamp(55px,14vw,90px)}.feature-grid,.skill-grid,.awards-grid,.contact-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:14px}.resume-stats strong{font-size:43px}.resume-stats{gap:20px}.page-footer{flex-direction:column}.project-photo .photo-slot{min-height:250px}}
+
+
+/* Final release — case study image galleries */
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0 4px}
+.project-gallery figure{margin:0;border:1px solid rgba(237,185,105,.22);background:rgba(22,7,16,.35);overflow:hidden}
+.project-gallery img{display:block;width:100%;height:220px;object-fit:cover;object-position:center;background:#2c1524}
+.project-gallery figcaption{padding:10px 13px 13px;font-size:12px;line-height:1.55;color:#d8bb9b;letter-spacing:.015em}
+.project-details ul{padding-left:20px}.project-details li{margin-bottom:11px;line-height:1.7}
+.project-photo .photo-slot.has-photo{background-position:center;background-size:cover}
+@media(max-width:720px){.project-gallery{grid-template-columns:1fr}.project-gallery img{height:230px}}
+
+/* Standalone static pages: navigation works without JavaScript. */
+.case-details{margin-top:6px}
+.case-details>summary{display:inline-block;list-style:none;user-select:none}
+.case-details>summary::-webkit-details-marker{display:none}
+.case-details[open]>summary{margin-bottom:12px}
+.case-details[open]>summary span{display:none}
+.case-details[open]>summary::after{content:"  −"}
+.mobile-menu{display:none}
+.mobile-menu summary{display:inline-block;cursor:pointer;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em;list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu-links{position:absolute;z-index:20;right:22px;left:22px;top:calc(100% - 4px);padding:20px;display:flex;flex-direction:column;gap:16px;border:1px solid #a6766370;background:#321224;box-shadow:0 12px 32px #1a071078}
+.page-top{position:relative}
+.mobile-menu-links a{color:#f5dcb3;letter-spacing:.12em;text-decoration:none;font-size:12px}
+@media(max-width:620px){.mobile-menu{display:block}.page-nav{display:none}}
+
+
+/* V29 — independent personal-project case studies; V27 homepage intentionally unchanged. */
+.page-nav{column-gap:clamp(11px,1.2vw,22px)}
+.page-nav a{letter-spacing:.095em}
+.personal-nav-link{color:#f5c77d!important}
+.personal-intro{position:relative;margin-top:-6px;margin-bottom:48px;max-width:950px}
+.personal-intro h1{font-size:clamp(56px,8vw,130px);font-weight:300;line-height:.98;letter-spacing:-.047em;margin:18px 0 20px;color:#ffe7be}
+.personal-intro h1 em{font-weight:300;font-style:normal;color:#e0a879}
+.personal-intro .lead{max-width:830px}
+.personal-index{display:flex;gap:11px;flex-wrap:wrap;margin:26px 0 40px}
+.personal-index a{border:1px solid rgba(233,185,115,.4);color:#f2ca8d;text-decoration:none;font-size:11px;letter-spacing:.12em;padding:12px 17px;transition:background .2s,border-color .2s}
+.personal-index a:hover{background:#73403045;border-color:#efbd70}
+.personal-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:10px 0 85px}
+.personal-metric{border-top:1px solid #c38e6a;background:linear-gradient(160deg,#61314930,#32132720);padding:19px 15px 20px}
+.personal-metric strong{display:block;font-weight:300;font-size:clamp(29px,3.4vw,48px);line-height:1.2;color:#ffe1a5}
+.personal-metric small{display:block;margin-top:7px;font-size:10px;line-height:1.5;letter-spacing:.13em;color:#c8aca7;text-transform:uppercase}
+.personal-case{scroll-margin-top:25px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(28px,4.5vw,75px);padding:40px 0 74px;border-top:1px solid #b17d6780;align-items:start}
+.personal-case:nth-of-type(even) .personal-case-media{order:2}
+.personal-case-photo{margin:0;border:1px solid #ac746173;position:relative;min-height:390px;background:#2c1021;overflow:hidden}
+.personal-case-photo>img{display:block;width:100%;height:480px;object-fit:cover}
+.personal-case-photo.crop-tall>img{object-position:50% 48%}
+.personal-case-photo:before,.personal-case-photo:after{content:'';position:absolute;pointer-events:none;width:34px;height:34px;border:1px solid #ffc879;z-index:1}
+.personal-case-photo:before{left:15px;top:15px;border-bottom:0;border-right:0}
+.personal-case-photo:after{right:15px;bottom:15px;border-top:0;border-left:0}
+.personal-caption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:10px;color:#c39e93;letter-spacing:.075em;line-height:1.5}
+.personal-case .eyebrow{line-height:1.85}
+.personal-case h2{font-weight:300;color:#ffe4bc;font-size:clamp(33px,3.6vw,57px);line-height:1.13;margin:12px 0 18px}
+.personal-case .case-summary{font-size:16px;line-height:1.8;color:#d6b3ac;margin:0 0 24px}
+.case-status{display:inline-block;border:1px solid #e6b66d80;border-radius:100px;padding:6px 12px;font-size:10px;letter-spacing:.13em;color:#eac183;margin:5px 0 15px}
+.case-status.progress{border-color:#d99e7877;background:#7d49202c}
+.case-number-row{display:flex;flex-wrap:wrap;gap:18px 24px;border-top:1px solid #986c5d80;border-bottom:1px solid #986c5d80;padding:15px 0;margin:16px 0 23px}
+.case-number{display:flex;flex-direction:column;gap:3px;min-width:90px}
+.case-number b{font-weight:300;font-size:25px;color:#f5c77d;line-height:1.1}
+.case-number span{font-size:10px;letter-spacing:.075em;color:#c9ada6;line-height:1.35}
+.case-highlights{margin:20px 0;padding:0 0 0 18px}
+.case-highlights li{font-size:14px;line-height:1.75;color:#d4b5aa;margin-bottom:9px}
+.case-highlights li::marker{color:#e9ae70}
+.case-deep-dive{margin:19px 0 5px;border-top:1px solid #946b5d68}
+.case-deep-dive summary{cursor:pointer;list-style:none;font-size:11px;color:#f2c179;letter-spacing:.14em;padding:16px 0}
+.case-deep-dive summary::-webkit-details-marker{display:none}
+.case-deep-dive summary:after{content:'+';margin-left:12px;font-size:16px}
+.case-deep-dive[open] summary:after{content:'−'}
+.case-deep-dive p,.case-deep-dive li{font-size:14px;line-height:1.8;color:#cfada7}
+.case-deep-dive h3{font-size:15px;font-weight:400;color:#f7d4a0;letter-spacing:.06em;margin:22px 0 7px}
+.case-deep-dive ul{margin:4px 0 24px;padding-left:21px}
+.case-deep-dive .project-gallery{margin-top:18px}
+.case-deep-dive .project-gallery img{height:190px}
+.wip-art{min-height:480px;background:radial-gradient(circle at 65% 35%,#61354b99,transparent 47%),linear-gradient(145deg,#3a192e,#180814);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wip-art svg{width:94%;height:auto;max-height:440px}
+.wip-art .wip-lines{stroke:#dda666;stroke-width:1.5;fill:none;opacity:.9}
+.wip-art .wip-faint{stroke:#b58285;stroke-width:.8;fill:none;opacity:.48;stroke-dasharray:5 8}
+.wip-art text{font-family:Jost,Arial,sans-serif;letter-spacing:4px;fill:#d7a773;font-size:12px}
+.personal-more{padding:70px 0 12px;border-top:1px solid #a67862}
+.personal-more h2{font-size:clamp(38px,5vw,74px);font-weight:300;color:#ffe0b0;margin:14px 0 18px}
+.personal-more>p{color:#d0aba8;line-height:1.7;max-width:770px}
+.personal-more-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px;margin-top:34px}
+.personal-more-grid article{border:1px solid #a4756669;background:#3b18271d;overflow:hidden}
+.personal-more-grid img{width:100%;height:230px;object-fit:cover;display:block}
+.personal-more-grid .card-inner{padding:24px}
+.personal-more-grid h3{font-size:24px;font-weight:300;color:#ffdfb1;margin:12px 0 10px}
+.personal-more-grid p{font-size:14px;line-height:1.75;color:#ccaaa6;margin:0 0 20px}
+.personal-more-grid .meta{font-size:10px;letter-spacing:.1em;color:#e1ad77}
+.personal-footer-cta{margin:90px 0 5px;border-top:1px solid #be8f76;padding:38px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.personal-footer-cta h2{font-weight:300;color:#ffe0b7;font-size:clamp(28px,3vw,50px);margin:0 0 10px}
+.personal-footer-cta p{color:#c5a6a4;line-height:1.6;margin:0}
+.personal-feature-callout{display:grid;grid-template-columns:1.3fr .7fr;gap:35px;align-items:center;padding:35px 40px;margin:0 0 60px;border:1px solid #d5a17070;background:linear-gradient(110deg,#55253b8c,#2a0c1c2e);position:relative;overflow:hidden}
+.personal-feature-callout:after{content:'';position:absolute;right:-40px;top:-110px;width:240px;height:240px;border:1px solid #e0b47830;border-radius:50%;pointer-events:none}
+.personal-feature-callout h2{font-size:clamp(27px,3vw,47px);line-height:1.2;margin:14px 0;color:#ffe1ad;font-weight:300}
+.personal-feature-callout p{color:#d3b3ac;line-height:1.75;font-size:15px}
+.personal-preview-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.personal-preview-photos img{width:100%;height:150px;object-fit:cover;border:1px solid #b788776e}
+.personal-preview-photos img:nth-child(3){grid-column:span 2;height:115px;object-position:center 55%}
+.personal-project-link{display:inline-flex;align-items:center;gap:12px;margin-top:8px;color:#ffd28e;letter-spacing:.14em;text-decoration:none;font-size:12px;border-bottom:1px solid #e4b07a;padding-bottom:8px}
+.personal-project-link:hover{color:#fff0c6}
+.personal-about-banner{margin-top:70px;padding:35px;border:1px solid #bd8b6970;background:#4e1f342b;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.personal-about-banner h3{font-size:30px;font-weight:300;color:#ffdcac;margin:8px 0}
+.personal-about-banner p{color:#cfaaa7;line-height:1.7;margin:0}
+@media(max-width:1080px){.personal-case{grid-template-columns:1fr 1.05fr}.personal-more-grid img{height:195px}}
+@media(max-width:820px){.personal-case{grid-template-columns:1fr}.personal-case:nth-of-type(even) .personal-case-media{order:0}.personal-case-photo>img,.wip-art{height:390px;min-height:390px}.personal-feature-callout{grid-template-columns:1fr}.personal-preview-photos{display:none}.personal-more-grid{grid-template-columns:1fr 1fr}.personal-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.personal-intro h1{font-size:clamp(50px,12vw,75px)}.personal-index{gap:7px}.personal-index a{font-size:10px;padding:10px}.personal-case{padding:25px 0 48px}.personal-case-photo>img,.wip-art{height:290px;min-height:290px}.personal-more-grid{grid-template-columns:1fr}.personal-feature-callout{padding:24px}.personal-about-banner{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.personal-project-link,.personal-index a{transition:none}}
+
+
+/* V30 refinements — more detailed work case studies, unchanged approved homepage */
+.page-heading .lead{max-width:890px}
+.work-quickstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:8px 0 56px}
+.work-quickstats>div{border-top:1px solid #c28c65;background:linear-gradient(130deg,#6c30413a,#2e10231e);padding:21px 17px}
+.work-quickstats strong{display:block;font-weight:300;font-size:clamp(32px,3.6vw,51px);color:#ffe0a2;line-height:1.1}
+.work-quickstats span{display:block;font-size:10px;letter-spacing:.09em;line-height:1.6;color:#d9b6ae;margin-top:9px;text-transform:uppercase}
+.work-entry{border-bottom:1px solid #a26a5d66;padding:48px 0 65px}
+.work-entry:last-child{border-bottom:0}
+.work-entry-head{display:grid;grid-template-columns:minmax(170px,24%) 1fr;gap:clamp(22px,4vw,65px)}
+.work-entry-head h2{font-size:clamp(42px,5.3vw,82px);font-weight:300;color:#ffe1b2;line-height:1.05;margin:7px 0 14px}
+.work-entry-head h3{font-size:clamp(17px,1.8vw,26px);color:#edc5af;font-weight:400;margin:0 0 14px}
+.work-entry-head p{font-size:16px;line-height:1.8;color:#d8b7ad;max-width:920px;margin:0 0 21px}
+.work-role{font-size:11px;line-height:1.8;letter-spacing:.14em;color:#e7b975;text-transform:uppercase}
+.work-date{font-size:12px;letter-spacing:.15em;color:#f3c98a;display:block;margin-top:13px}
+.work-discipline{font-size:10px;letter-spacing:.11em;line-height:1.6;color:#bfa19d;display:block;margin-top:10px}
+.work-detail-layout{margin:30px 0 10px 24%;padding-left:clamp(22px,4vw,65px)}
+.work-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:24px}
+.work-module{border:1px solid #a679666b;background:linear-gradient(160deg,#54233c49,#260d1e28);padding:23px 25px 21px}
+.work-module h4{font-size:15px;letter-spacing:.07em;font-weight:500;color:#ffd497;margin:0 0 12px}
+.work-module p{font-size:14px;line-height:1.72;color:#cfaca7;margin:0}
+.work-module p+p{margin-top:11px}
+.work-module ul{padding-left:19px;margin:0}
+.work-module li{font-size:14px;line-height:1.75;color:#d3afa7;margin-bottom:8px}
+.work-module li::marker{color:#e9b777}
+.work-full{grid-column:1/-1}
+.work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.work-gallery figure{margin:0;border:1px solid #9b6a6469;background:#2b101e;overflow:hidden}
+.work-gallery img{display:block;width:100%;height:200px;object-fit:cover;object-position:center}
+.work-gallery figcaption{font-size:11px;line-height:1.6;color:#d5b2a0;padding:11px 13px 14px}
+.work-caveat{font-size:12px!important;color:#b18d92!important;line-height:1.65!important;margin:16px 0!important}
+.work-link{font-size:11px;letter-spacing:.13em;color:#efbc77;text-decoration:none;border-bottom:1px solid #d1a06e;display:inline-block;padding:10px 0;margin:18px 0 8px}
+.work-link:hover{color:#ffe5b7}
+.work-section-label{margin:65px 0 4px;font-size:12px;letter-spacing:.18em;color:#dbb16e}
+.achievement-note{display:inline-block;border:1px solid #d4a56b8f;background:#7e503c26;color:#f6c482;font-size:11px;letter-spacing:.11em;padding:9px 13px;margin:0 0 21px}
+.project-evidence{border-left:2px solid #d9ae77;padding:10px 17px;color:#ddbab0;font-size:13px;line-height:1.65;margin:13px 0 20px;background:#682d3b25}
+.resume-stats{min-width:230px}
+.project-copy h2{line-height:1.13}
+@media(max-width:950px){.work-detail-layout{margin-left:0;padding-left:0}.work-detail-grid{grid-template-columns:1fr}.work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.work-quickstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.work-entry-head{grid-template-columns:1fr;gap:11px}.work-entry{padding:26px 0 47px}.work-gallery{grid-template-columns:1fr}.work-gallery img{height:240px}.work-quickstats{gap:8px}.work-quickstats>div{padding:14px 12px}}
+
+
+/* V30 refinements — more detailed work case studies, unchanged approved homepage */
+.page-heading .lead{max-width:890px}
+.work-quickstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:8px 0 56px}
+.work-quickstats>div{border-top:1px solid #c28c65;background:linear-gradient(130deg,#6c30413a,#2e10231e);padding:21px 17px}
+.work-quickstats strong{display:block;font-weight:300;font-size:clamp(32px,3.6vw,51px);color:#ffe0a2;line-height:1.1}
+.work-quickstats span{display:block;font-size:10px;letter-spacing:.09em;line-height:1.6;color:#d9b6ae;margin-top:9px;text-transform:uppercase}
+.work-entry{border-bottom:1px solid #a26a5d66;padding:48px 0 65px}
+.work-entry:last-child{border-bottom:0}
+.work-entry-head{display:grid;grid-template-columns:minmax(170px,24%) 1fr;gap:clamp(22px,4vw,65px)}
+.work-entry-head h2{font-size:clamp(42px,5.3vw,82px);font-weight:300;color:#ffe1b2;line-height:1.05;margin:7px 0 14px}
+.work-entry-head h3{font-size:clamp(17px,1.8vw,26px);color:#edc5af;font-weight:400;margin:0 0 14px}
+.work-entry-head p{font-size:16px;line-height:1.8;color:#d8b7ad;max-width:920px;margin:0 0 21px}
+.work-role{font-size:11px;line-height:1.8;letter-spacing:.14em;color:#e7b975;text-transform:uppercase}
+.work-date{font-size:12px;letter-spacing:.15em;color:#f3c98a;display:block;margin-top:13px}
+.work-discipline{font-size:10px;letter-spacing:.11em;line-height:1.6;color:#bfa19d;display:block;margin-top:10px}
+.work-detail-layout{margin:30px 0 10px 24%;padding-left:clamp(22px,4vw,65px)}
+.work-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:24px}
+.work-module{border:1px solid #a679666b;background:linear-gradient(160deg,#54233c49,#260d1e28);padding:23px 25px 21px}
+.work-module h4{font-size:15px;letter-spacing:.07em;font-weight:500;color:#ffd497;margin:0 0 12px}
+.work-module p{font-size:14px;line-height:1.72;color:#cfaca7;margin:0}
+.work-module p+p{margin-top:11px}
+.work-module ul{padding-left:19px;margin:0}
+.work-module li{font-size:14px;line-height:1.75;color:#d3afa7;margin-bottom:8px}
+.work-module li::marker{color:#e9b777}
+.work-full{grid-column:1/-1}
+.work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.work-gallery figure{margin:0;border:1px solid #9b6a6469;background:#2b101e;overflow:hidden}
+.work-gallery img{display:block;width:100%;height:200px;object-fit:cover;object-position:center}
+.work-gallery figcaption{font-size:11px;line-height:1.6;color:#d5b2a0;padding:11px 13px 14px}
+.work-caveat{font-size:12px!important;color:#b18d92!important;line-height:1.65!important;margin:16px 0!important}
+.work-link{font-size:11px;letter-spacing:.13em;color:#efbc77;text-decoration:none;border-bottom:1px solid #d1a06e;display:inline-block;padding:10px 0;margin:18px 0 8px}
+.work-link:hover{color:#ffe5b7}
+.work-section-label{margin:65px 0 4px;font-size:12px;letter-spacing:.18em;color:#dbb16e}
+.achievement-note{display:inline-block;border:1px solid #d4a56b8f;background:#7e503c26;color:#f6c482;font-size:11px;letter-spacing:.11em;padding:9px 13px;margin:0 0 21px}
+.project-evidence{border-left:2px solid #d9ae77;padding:10px 17px;color:#ddbab0;font-size:13px;line-height:1.65;margin:13px 0 20px;background:#682d3b25}
+.resume-stats{min-width:230px}
+.project-copy h2{line-height:1.13}
+@media(max-width:950px){.work-detail-layout{margin-left:0;padding-left:0}.work-detail-grid{grid-template-columns:1fr}.work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.work-quickstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.work-entry-head{grid-template-columns:1fr;gap:11px}.work-entry{padding:26px 0 47px}.work-gallery{grid-template-columns:1fr}.work-gallery img{height:240px}.work-quickstats{gap:8px}.work-quickstats>div{padding:14px 12px}}
+
+/* Expanded 2026 portfolio: technical narrative and photographic evidence. */
+.engineering-section{border-top:1px solid rgba(236,180,111,.36);margin-top:52px;padding-top:27px}
+.engineering-section h3,.case-expansion h3{font-size:clamp(19px,2vw,27px);font-weight:400;color:#f6d3a0;margin:18px 0 12px}
+.engineering-section p,.engineering-section li,.case-expansion p,.case-expansion li{font-size:15px;line-height:1.82;color:#d8b8b2}
+.engineering-section ul,.case-expansion ul{padding-left:22px}
+.highlight-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:15px;margin:27px 0 32px}
+.highlight-band .highlight{padding:20px;border:1px solid #af795d82;background:linear-gradient(140deg,#632d393c,#250b181c)}
+.highlight strong{font-size:clamp(25px,3vw,43px);font-weight:300;color:#ffda9b;display:block;line-height:1.2}
+.highlight span{font-size:11px;letter-spacing:.07em;color:#d0aaa4;display:block;line-height:1.6;margin-top:6px}
+.case-expansion{margin:26px 0 12px;border-top:1px solid rgba(226,178,110,.32);padding:14px 0}
+.case-expansion p{margin:7px 0 13px}
+.photo-story{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:23px 0 30px}
+.photo-story figure{margin:0;border:1px solid rgba(224,167,113,.35);background:#1e0815;overflow:hidden}
+.photo-story img{width:100%;height:230px;object-fit:cover;display:block}
+.photo-story figcaption{padding:11px 13px;font-size:12px;line-height:1.5;color:#d8b9a4}
+.section-caption{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#f1bf78;margin-bottom:16px}
+.photo-needed{border:1px dashed #c89d6e8c;padding:16px 20px;margin:24px 0;color:#dbc2af;font-size:13px;line-height:1.7;background:#6132491c}
+.page-main .photo-needed strong{color:#f5d49a}
+.showcase-link{display:inline-block;border-bottom:1px solid #d5a363;color:#f3ca8d;text-decoration:none;padding:8px 0;letter-spacing:.1em;font-size:12px}
+.project-card{align-items:start}.project-copy{min-width:0}
+.photo-slot{background-color:#381426}
+@media(max-width:650px){.highlight-band{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-story{grid-template-columns:1fr}.photo-story img{height:240px}}
+</style></head><body class="page-open"><section id="portfolio-page"><div class="page-shell"><header class="page-top"><a class="site-mark" href="./preview.html">LF<span> / </span>LYRA FLETCHER</a><nav aria-label="Portfolio navigation" class="page-nav"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a class="personal-nav-link active" href="./personal.html">PERSONAL PROJECTS</a><a href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a href="./contact.html">GET IN TOUCH</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile portfolio navigation" class="mobile-menu-links"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a href="./personal.html">PERSONAL PROJECTS</a><a href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a href="./contact.html">GET IN TOUCH</a></nav></details></header><main class="page-main">
+<div class="personal-intro">
+<span class="eyebrow">02.1 / INDEPENDENT ENGINEERING &amp; HANDS-ON BUILDS</span>
+<h1>Personal engineering projects.</h1>
+<p class="lead">Self-directed builds in embedded systems, biomedical mechatronics, digital fabrication and UAV design, with implementation details and real photographs. In-progress concepts are labelled as such.</p>
+<div aria-label="Jump to personal projects" class="personal-index"><a href="#irrigation">01 / IRRIGATION</a><a href="#naloxone">02 / NALOXONE</a><a href="#drone">03 / DRONE — WIP</a><a href="#terrain">04 / TERRAIN TABLE</a><a href="#other-builds">MORE BUILDS ↓</a></div>
+</div>
+<div aria-label="Engineering project metrics" class="personal-metrics">
+<div class="personal-metric"><strong>6</strong><small>Independently controlled irrigation zones</small></div>
+<div class="personal-metric"><strong>12 V</strong><small>Solenoid valve power architecture</small></div>
+<div class="personal-metric"><strong>0.19 L/s</strong><small>Selected pump's rated flow</small></div>
+<div class="personal-metric"><strong>4</strong><small>Featured independent projects</small></div>
+</div>
+<div class="personal-cases">
+<article class="personal-case" id="irrigation">
+<div class="personal-case-media"><figure class="personal-case-photo crop-tall"><img alt="Prototype six-zone automated irrigation controller with ESP32 and Raspberry Pi wiring, power electronics, valves and water pump" loading="eager" src="./images/garden.jpg"/></figure><div class="personal-caption"><span>ACTUAL PROTOTYPE / CONTROL HARDWARE</span><span>01 — 04</span></div></div>
+<div class="personal-case-copy">
+<span class="eyebrow">01 / EMBEDDED ELECTRONICS · FLUID SYSTEMS · WEB INTERFACE</span>
+<h2>Six-Zone Smart Irrigation System</h2>
+<p class="case-summary">A self-directed mechatronics system connecting the physical garden to a browser interface: measure soil conditions, make decisions, and actuate water flow with manual override.</p>
+<div class="case-number-row"><div class="case-number"><b>6 + 6</b><span>Moisture inputs / valves</span></div><div class="case-number"><b>12 V</b><span>Valve actuation</span></div><div class="case-number"><b>0.19 L/s</b><span>Pump rated flow</span></div></div>
+<ul class="case-highlights"><li>Developed a six-zone architecture using six soil-moisture sensors and six individually actuated solenoid valves.</li><li>Integrated ESP32-based I/O with a Raspberry Pi, MOSFET valve switching, a reservoir-fed pump and supporting power electronics.</li><li>Built the control stack around a Node/Express backend and React/Tailwind frontend, providing manual and automatic operating modes.</li></ul>
+<div class="chips"><span>ESP32</span><span>Raspberry Pi</span><span>Node / Express</span><span>React / Tailwind</span><span>MOSFET drivers</span><span>Fluid routing</span></div>
+<details class="case-deep-dive"><summary>DESIGN BREAKDOWN &amp; VALIDATION PLAN</summary>
+<h3>Systems architecture</h3><p>The controller separates measurement, low-voltage logic, actuator switching and water delivery. Sensor readings inform zone-level decisions; power stages actuate the 12 V valves and pump, while the web interface exposes controls. The physical layout is planned for a horseshoe-shaped garden with a bucket/reservoir supply.</p>
+<h3>Engineering considerations</h3><ul><li>Converting sensor measurements into robust per-zone decisions without confusing analog sensing and higher-current actuation.</li><li>Electrical isolation and distribution for pump/valve switching; handling manual commands and automatic logic in one system.</li><li>Routing and serviceability of tubing, reservoir, sensors, controllers and wiring in an outdoor layout.</li></ul><p><strong>Prototype status:</strong> The photographs document a control-system build. They do not, by themselves, establish completed long-term outdoor deployment or measured water savings.</p>
+</details>
+</div>
+<p class="engineering-section"><strong style="color:#f2c889">Systems integration:</strong> Six moisture channels drive independently controlled 12 V solenoid valves through protected power-switching stages. The selected pump is rated at 0.19 L/s; this is a component specification rather than measured delivered flow. Key design work includes plumbing, electronics, control logic and a browser-accessible interface.</p></article>
+<article class="personal-case" id="naloxone">
+<div class="personal-case-media"><figure class="personal-case-photo"><img alt="Wearable naloxone delivery concept prototype with light-coloured 3D-printed housing and attachment straps" loading="lazy" src="./images/naloxone.jpg"/></figure><div class="personal-caption"><span>PROOF OF CONCEPT / NOT A MEDICAL DEVICE</span><span>02 — 04</span></div></div>
+<div class="personal-case-copy">
+<span class="eyebrow">02 / BIOMEDICAL MECHATRONICS · SENSING · ACTUATION</span>
+<h2>Wearable Automated Naloxone Injector</h2>
+<p class="case-summary">A personal biomedical engineering proof of concept exploring how physiological sensing, embedded control and electromechanical actuation could be integrated into a wearable overdose-response device.</p>
+<div class="case-number-row"><div class="case-number"><b>2020–23</b><span>Project development</span></div><div class="case-number"><b>SpO₂</b><span>Pulse-oximetry input</span></div><div class="case-number"><b>PWM</b><span>Actuator drive / feedback</span></div></div>
+<ul class="case-highlights"><li>Integrated MAX30101 / MAX32664 pulse-oximetry components, Arduino-based processing and actuator control into a system-level concept.</li><li>Investigated linear actuation using a PA-MC1 v3-style feedback-equipped actuator, PWM drive and position measurement for controlled mechanical deployment.</li><li>Modelled and 3D-printed wearable housings; iterated packaging and mounting around the electronics and actuation components.</li></ul>
+<div class="chips"><span>Biomedical hardware</span><span>MAX30101 / MAX32664</span><span>Arduino</span><span>Actuator feedback</span><span>3D printing</span></div>
+<details class="case-deep-dive"><summary>DESIGN PROCESS &amp; PROTOTYPE PHOTOS</summary>
+<h3>Integration challenge</h3><p>The prototype required a wearable package accommodating sensors, a controller, actuation components and user attachment. I approached it as a full mechatronics problem: signal acquisition, control decisions, motion, ergonomics and enclosure iteration.</p>
+<h3>Validation boundary</h3><p><strong>Academic / exploratory prototype only.</strong> No clinical validation, drug-delivery accuracy, autonomous overdose detection performance, or regulatory approval is claimed. Photos and CAD demonstrate hardware architecture rather than a clinically deployable treatment.</p>
+<div class="project-gallery"><figure><img alt="CAD rendering of wearable injector enclosure" loading="lazy" src="./images/naloxone-cad.jpg"/><figcaption>Mechanical enclosure and packaging design</figcaption></figure><figure><img alt="Early printable case components for injector" loading="lazy" src="./images/naloxone-case.jpg"/><figcaption>3D-print enclosure iterations</figcaption></figure><figure><img alt="Microcontroller pulse-oximetry sensor prototype" loading="lazy" src="./images/pulse-ox.jpg"/><figcaption>Sensor integration / early control electronics</figcaption></figure></div>
+</details>
+</div>
+<p class="engineering-section"><strong style="color:#f2c889">Evidence and limits:</strong> Prototype photographs, enclosure CAD and pulse-oximeter hardware demonstrate mechanical and electronic integration. This work is a proof of concept, not a validated medical product or a claim of reliable emergency treatment.</p></article>
+<article class="personal-case" id="drone">
+<div class="personal-case-media"><figure class="personal-case-photo"><div aria-label="Abstract additive manufacturing concept artwork, not a photograph or render of the drone in progress" class="wip-art" role="img"><svg aria-hidden="true" viewbox="0 0 640 430" xmlns="http://www.w3.org/2000/svg"><g class="wip-faint"><path d="M75 77H565 M75 350H565 M90 63V367 M550 63V367"></path><path d="M130 95 485 310 M485 95 130 310"></path><ellipse cx="315" cy="219" rx="186" ry="118"></ellipse><ellipse cx="315" cy="219" rx="160" ry="92"></ellipse></g><g class="wip-lines"><path d="M130 310L315 376 508 302 322 238Z" opacity=".4"></path><path d="M155 287L316 345 486 283"></path><path d="M155 268L316 326 486 264"></path><path d="M155 249L316 307 486 245"></path><path d="M155 230L316 288 486 226"></path><path d="M155 211L316 269 486 207"></path><path d="M155 192L316 250 486 188"></path><path d="M155 173L316 231 486 169"></path><path d="M155 154L316 212 486 150"></path><path d="M155 154L322 95 486 150 316 212Z"></path><path d="M322 95V75"></path><path d="M155 154V287L316 345V212"></path><path d="M486 150V283L316 345"></path></g><circle cx="322" cy="95" fill="#ffce82" r="5"></circle><circle cx="155" cy="287" fill="#ffce82" r="4"></circle><circle cx="486" cy="283" fill="#ffce82" r="4"></circle><text x="86" y="403">PRINT-IN-PLACE / DEVELOPMENT STUDY</text></svg></div></figure><div class="personal-caption"><span>ABSTRACT PROCESS VISUAL — NOT A DRONE RENDER</span><span>03 — 04</span></div></div>
+<div class="personal-case-copy"><span class="eyebrow">03 / ADDITIVE MANUFACTURING · ROBOTICS · PRODUCT DEVELOPMENT</span><br/><span class="case-status progress">● IN PROGRESS — NO PERFORMANCE CLAIMS</span><h2>Print-in-Place Drone</h2>
+<p class="case-summary">An active independent drone project exploring what can be designed directly for additive manufacturing, with the ambition of simplifying fabrication and assembly while retaining functional mechanical and electronic integration.</p>
+<ul class="case-highlights"><li><strong>Engineering questions:</strong> printable feature clearances, build orientation, tolerances, structural stiffness, packaging and maintenance access.</li><li><strong>Planned integration:</strong> examine the trade-offs between printed structures, propulsion components, control hardware, wiring and serviceability.</li><li><strong>Planned verification:</strong> move from print trials and fit checks to structural evaluation, bench-level integration and flight-test readiness before asserting performance.</li></ul>
+<div class="chips"><span>Design for additive manufacturing</span><span>Mechanical integration</span><span>Rapid iteration</span><span>Validation planning</span></div>
+<details class="case-deep-dive"><summary>PROJECT SCOPE &amp; STATUS</summary><p>Currently in development. Dimensions, mass, materials, flight controller selection, print outcomes and flight results will be added when documented. The illustration is a conceptual manufacturing graphic—not a claimed image of the aircraft.</p><h3>Why it matters</h3><p>This project makes the entire design-to-test loop visible: choosing a printable architecture, interrogating the manufacturing limitations, integrating systems and documenting what survives real tests. My AirMetal work provided relevant UAV development experience, but this is a separate independent concept.</p></details>
+</div>
+<div class="photo-needed"><strong>Photo requested:</strong> a CAD screenshot, slicer view, first printed part or assembly photo of your actual print-in-place drone. I have not used a generic drone photo to imply that it depicts your current design.</div></article>
+<article class="personal-case" id="terrain">
+<div class="personal-case-media"><figure class="personal-case-photo"><img alt="CAD rendering of round table with layered topographic landscape under a clear circular tabletop" loading="lazy" src="./images/topography.jpg"/></figure><div class="personal-caption"><span>TABLE CONCEPT / CAD &amp; FABRICATION PROCESS</span><span>04 — 04</span></div></div>
+<div class="personal-case-copy"><span class="eyebrow">04 / CAD · DIGITAL FABRICATION · WOODWORKING</span><h2>Topographical Landscape Table</h2>
+<p class="case-summary">A personally designed topographical coffee-table concept translating digital elevation data into a layered three-dimensional landscape, supported by custom woodworking and protected by a circular glass top. The project combines geographic data processing, CAD, additive fabrication and furniture-scale assembly.</p>
+<ul class="case-highlights"><li>Processed terrain geometry into a printable relief model, evaluating elevation scaling, contour fidelity and how layers would register in the final display.</li><li>Modelled the complete circular assembly in CAD, including the landscape insert, structural wood base, glass cover, standoffs and visible component interfaces.</li><li>Fabricated and glued up wooden panels for the physical tabletop while working through alignment, clamping, dimensional consistency and finishing constraints.</li><li>Maintained a distinction between the concept render, printed terrain trials and the physical in-progress wooden assembly; final completion is not claimed.</li></ul>
+<div class="chips"><span>SolidWorks / CAD</span><span>Digital terrain</span><span>3D printing</span><span>Woodworking</span><span>Product design</span></div>
+<details class="case-deep-dive"><summary>FROM CAD TO SHOP FLOOR</summary><p>The challenge is not simply producing an attractive terrain model: the landscape must be scaled from geographic data, converted into printable geometry, registered within a furniture-sized assembly and supported by a base that meets woodworking tolerances. The transparent cover, standoffs and edge structure must be compatible with both the visual terrain and practical fabrication.</p><p><strong>Project status:</strong> Images show the CAD concept, digital terrain preparation and an in-progress woodworking glue-up; a finished tabletop is not claimed.</p>
+<div class="project-gallery"><figure><img alt="Terrain geometry displayed in a slicer for additive manufacturing" loading="lazy" src="./images/terrain-print.jpg"/><figcaption>Digital terrain preparation</figcaption></figure><figure><img alt="Wooden tabletop planks clamped for glue-up in home workshop" loading="lazy" src="./images/table-build.jpg"/><figcaption>Woodworking and panel glue-up</figcaption></figure></div></details></div>
+<p class="engineering-section"><strong style="color:#f2c889">Design-to-build:</strong> Developed digital terrain geometry and a circular glass-top presentation concept, then translated the design to print preparation and hands-on wood-panel alignment/glue-up. A completed-table photo would show the final result; the existing images document genuine intermediate steps.</p></article>
+</div>
+<section class="personal-more" id="other-builds"><span class="eyebrow">MORE / FABRICATION &amp; EXPERIMENTAL ENGINEERING</span><h2>Additional fabrication &amp; experiments.</h2><p>Smaller projects still show useful engineering behaviour: make a hypothesis, manufacture a part, instrument a test and communicate what the evidence actually supports. Academic work is identified separately from independent work.</p>
+<div class="personal-more-grid">
+<article><img alt="Disassembled folding knife showing handle scales, frame and metal blade" loading="lazy" src="./images/pocket-knife.jpg"/><div class="card-inner"><span class="meta">PERSONAL · MECHANICAL DESIGN</span><h3>Handmade Folding Knife — Gift for My Dad</h3><p>Designed and built a one-off folding knife for my dad, combining woodworking for the handle with metalworking and mechanical assembly. Worked through component fit, pivot alignment, tolerances, material selection and hand finishing to turn separate blade, liner and handle components into a functioning personal gift.</p><a class="personal-project-link" href="./images/knife-workbench.jpg">SHOP PROCESS PHOTO ↗</a></div></article>
+</div>
+</section>
+<section class="personal-footer-cta"><div><h2>Explore more engineering work.</h2><p>Explore my professional engineering projects or get in touch about robotics and mechatronics opportunities.</p></div><div><a class="solid-link" href="./projects.html">VIEW ENGINEERING WORK ↗</a> <a class="personal-project-link" href="./contact.html">CONTACT ME ↗</a></div></section>
+<section class="engineering-section currently-building" id="in-progress"><div class="eyebrow">CURRENTLY IN DEVELOPMENT</div><h2>Robotics projects underway.</h2><div class="personal-more-grid"><article><div class="card-inner"><span class="meta">ROBOTICS · MECHANISM DESIGN · IN PROGRESS</span><h3>Tendon-Driven Robotic Hand</h3><p>Developing an anthropomorphic hand concept around tendon routing, elastic return and servo-based finger actuation. Current design work focuses on mechanism packaging, joint motion, cable routing and potential IMU/limit-switch feedback. No finished build or performance validation is claimed yet.</p><div class="chips"><span>Mechanical design</span><span>Actuation</span><span>Sensor integration</span></div></div></article><article><div class="card-inner"><span class="meta">UAV · ADDITIVE MANUFACTURING · IN PROGRESS</span><h3>Sub-250 g Print-in-Place Drone</h3><p>Exploring a lightweight drone architecture targeting a total mass below 250 g, with print-in-place manufacturing and reduced assembly complexity as design drivers. Active work includes airframe geometry, printability and hardware packaging; target mass is a design requirement, not a measured result.</p><div class="chips"><span>Sub-250 g target</span><span>3D printing</span><span>UAV design</span></div></div></article></div></section></main><footer class="page-footer"><span>© 2026 LYRA FLETCHER</span><span>MECHANICAL ENGINEERING · MECHATRONICS</span><a href="./preview.html">BACK TO HOME ↑</a></footer></div></section></body></html>

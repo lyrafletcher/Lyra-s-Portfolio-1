@@ -1,0 +1,1 @@
+All currently supplied project photographs have been integrated and optimized as JPEG files under images/ and public/images/. Additional images can be added to the gallery arrays in public/site.js. Check permission to publicly share employer-related images.

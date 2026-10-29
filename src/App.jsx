@@ -1,0 +1,4 @@
+import React from 'react';
+import art from './art.svg?raw';
+import './style.css';
+export default function App(){return <main className="landing" aria-label="Lyra Fletcher portfolio homepage"><div dangerouslySetInnerHTML={{__html:art}}/><header className="intro"><h1 className="name">LYRA FLETCHER</h1><div className="name-rule"/><p className="major">MECHANICAL ENGINEERING</p><p className="tags">MECHATRONICS · DESIGN · DEVELOPMENT</p></header><nav className="menu" aria-label="Portfolio sections"><a className="nav-link nav-0" href="./about.html">ABOUT</a><a className="nav-link nav-1" href="./resume.html">RESUME</a><a className="nav-link nav-2" href="./projects.html">PROJECTS</a><a className="nav-link nav-3" href="./experience.html">WORK EXPERIENCE</a><a className="nav-link nav-4" href="./awards.html">AWARDS & RECOGNITION</a><a className="nav-link nav-5" href="./contact.html">GET IN TOUCH</a></nav></main>}

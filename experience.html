@@ -1,568 +1,289 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lyra Fletcher | Experience</title>
+<!DOCTYPE html>
 
-  <style>
-    :root{
-      --bg:#fff; --text:#121212; --muted:#5a5a5a;
-      --accent:#ffd400; --accentSoft: rgba(255, 212, 0, 0.28);
-      --border: rgba(0,0,0,0.09);
-      --shadowGlow: 0 0 0.9rem rgba(255, 212, 0, 0.55), 0 0 2.4rem rgba(255, 212, 0, 0.25);
-      --shadowSoft: 0 10px 30px rgba(0,0,0,0.06);
-      --radius: 18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    .wrap{ width:min(1100px, 92vw); margin:0 auto; padding:28px 0 60px; }
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Work Experience — Lyra Fletcher</title><style>@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+:root{font-family:Jost,Arial,sans-serif;color:#f4dfb9;background:#210812;font-synthesis:none}*{box-sizing:border-box}body{margin:0} .landing{height:100svh;min-height:480px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 12%,#602039 0%,transparent 58%),radial-gradient(ellipse at 16% 100%,#3e0d25,transparent 48%),linear-gradient(110deg,#1a0710,#360a21 70%,#260915)}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}.trace{fill:none;stroke:#e9b45b;stroke-width:1.85;stroke-linejoin:miter;stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px rgba(255,197,97,.9)) drop-shadow(0 0 7px rgba(255,161,55,.55));stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s)}.terminal{fill:#eebc67;filter:drop-shadow(0 0 3px #ffdd9c) drop-shadow(0 0 9px rgba(255,180,65,.72))}.signal{fill:#f5c76c;filter:drop-shadow(0 0 3px #ffdc96) drop-shadow(0 0 8px rgba(255,180,65,.6))}.signal:nth-of-type(even){fill:none;stroke:#f2bd65;stroke-width:1.5}.gear-outline{fill:none;stroke:#e7bc80;stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}.gear-inner{fill:none;stroke:#d8ac76;stroke-width:1.15;vector-effect:non-scaling-stroke;opacity:.7}.gear-spin{animation:spin 34s linear infinite;transform-origin:0px 0px}.engineer-lines{fill:none;stroke:#d7a67f;stroke-width:1.1;opacity:.33;vector-effect:non-scaling-stroke}.engineer-lines path{stroke-width:1.4}@keyframes draw{to{stroke-dashoffset:0}}@keyframes spin{to{rotate:360deg}}.intro{position:absolute;left:7.2%;top:20.3%;width:43%;}.name{font-size:clamp(18px,2.02vw,36px);letter-spacing:.45em;white-space:nowrap;font-weight:300;margin:0 0 14px}.name-rule{width:min(470px,91%);height:1px;background:#d6a75c;position:relative}.name-rule:after{content:'';position:absolute;right:-3px;top:-3px;width:6px;height:6px;border:1px solid #d3a05a;border-radius:50%;background:#2e1020}.major{margin:17px 0 1px;font-size:clamp(11px,.95vw,17px);letter-spacing:.28em;color:#d7a6a0}.tags{margin:1px 0;font-size:clamp(9px,.72vw,14px);letter-spacing:.3em;color:#bb858b}.menu{position:absolute;inset:0;pointer-events:none}.nav-link{pointer-events:auto;position:absolute;left:8.7%;top:var(--y);transform:translateY(-50%);font-size:clamp(10px,.94vw,15px);letter-spacing:.26em;text-decoration:none;color:#efd4ae;font-weight:400;white-space:nowrap;transition:color .25s,text-shadow .25s,letter-spacing .25s}.nav-link:hover,.nav-link:focus-visible{color:#fff3cb;text-shadow:0 0 12px #ffc16f;letter-spacing:.3em;outline-offset:7px}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}
+/* Aspect-ratio-aware artwork: on narrow portrait screens, retain the designed canvas and pan to keep links readable. */
+@media(max-aspect-ratio:1/1){.landing{min-height:650px}.hero-art{width:155%;height:100%;left:-2%;}.intro{top:19%;left:8%;width:88%}.name{font-size:clamp(17px,4.1vw,30px);letter-spacing:.31em}.major{font-size:11px}.tags{font-size:9px}.nav-link{left:12%;font-size:11px;letter-spacing:.14em}.nav-0{--y:44.1%}.nav-1{--y:50.35%}.nav-2{--y:56.6%}.nav-3{--y:62.85%}.nav-4{--y:69.1%}.nav-5{--y:75.35%}}
+@media(prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
+.wire-glow{fill:none;stroke:#ffb64c;stroke-width:7;opacity:.65;stroke-linejoin:miter;stroke-linecap:round;pointer-events:none}.wire-glow path{vector-effect:non-scaling-stroke}
 
-    header{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:18px;
-    }
-    .name{ margin:0; font-size:clamp(28px,4.5vw,44px); letter-spacing:-0.02em; }
-    .toplinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px; border-radius:999px; border:1px solid var(--border);
-      text-decoration:none; color:var(--text); background:#fff;
-      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-weight:600; font-size:14px;
-    }
-    .pill:hover{ transform:translateY(-1px); box-shadow:var(--shadowGlow); }
 
-    @media (max-width: 860px){
-      header{ align-items:flex-start; flex-direction:column; }
-      .toplinks{ justify-content:flex-start; }
-    }
+/* Version 18: glow uses the same progressive stroke reveal as the actual trace. */
+.wire-glow{stroke:#ffae40;stroke-width:9;opacity:.85;fill:none;pointer-events:none}
+.glow-trace{fill:none;stroke:#ffb348;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:100;stroke-dashoffset:100;animation:draw 2.8s cubic-bezier(.42,0,.58,1) both;animation-delay:calc(var(--i)*.11s);vector-effect:non-scaling-stroke}
+.trace{stroke:#ffd07b;stroke-width:2.15;filter:drop-shadow(0 0 2px rgba(255,213,125,.9))}
+.gear-outline{stroke:#ffd48c;stroke-width:2.05;filter:drop-shadow(0 0 4px rgba(255,177,62,.9))}
+.gear-inner{stroke:#dcb879;opacity:.85}
+.gear-rim{fill:none;stroke:#f4bc65;stroke-width:1.15;opacity:.64;vector-effect:non-scaling-stroke}
+.gear-fine{fill:none;stroke:#ffda98;stroke-width:.8;opacity:.5;vector-effect:non-scaling-stroke}
+.gear-halo{fill:none;stroke:#f2a944;stroke-width:6;opacity:.6;filter:drop-shadow(0 0 9px #ff9f30);vector-effect:non-scaling-stroke}
+@media(prefers-reduced-motion:reduce){.glow-trace{animation:none;stroke-dashoffset:0}}
 
-    .hero{
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      background:#fff;
-      box-shadow: var(--shadowGlow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-      margin-bottom:18px;
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:-120px auto auto -120px;
-      width:260px; height:260px;
-      background: radial-gradient(circle, var(--accentSoft), transparent 65%);
-      filter: blur(2px);
-      pointer-events:none;
-    }
-    .hero h2{ margin:0 0 8px 0; font-size:18px; letter-spacing:-0.01em; }
-    .hero p{ margin:0; color:var(--muted); line-height:1.55; }
+/* V20: faster synchronized circuit reveal; gear embellishments */
+.trace,.glow-trace{animation-duration:2.05s;animation-timing-function:cubic-bezier(.35,.05,.58,1);animation-delay:calc(var(--i)*.075s)}
+.gear-spin{animation-duration:42s}
+.gear-metal{fill:url(#gearBronze);stroke:#ffc978;stroke-width:1.6;opacity:.24;vector-effect:non-scaling-stroke}
+.gear-etched{fill:none;stroke:#ffdc9d;stroke-width:1;opacity:.62;vector-effect:non-scaling-stroke}
+.gear-accent{fill:none;stroke:#ffc774;stroke-width:2;opacity:.74;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px rgba(255,174,58,.75))}
+.gear-studs{fill:#f8d398;filter:drop-shadow(0 0 4px #ffc16e)}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}.gear-spin{animation:none}}
 
-    /* Section headers */
-    .section{
-      margin-top: 18px;
-    }
-    .sectionHead{
-      display:flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 0 0 12px 0;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:-0.01em;
-    }
-    .sectionHead small{
-      color: var(--muted);
-    }
+/* V21: quicker synchronized reveal and brighter gear outline */
+.trace,.glow-trace{animation-duration:1.25s;animation-timing-function:cubic-bezier(.25,.08,.45,1);animation-delay:calc(var(--i)*.012s)}
+.gear-outline{stroke:#ffe5a5;stroke-width:3.2;filter:drop-shadow(0 0 3px rgba(255,218,140,.95)) drop-shadow(0 0 10px rgba(255,163,44,.85))}
+.gear-accent{stroke:#ffdc91;stroke-width:2.6;opacity:.95;filter:drop-shadow(0 0 7px rgba(255,171,54,.9))}
+.gear-rim{stroke:#ffd38a;opacity:.85}
+.gear-halo{stroke:#ffbf58;opacity:.82}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
 
-    /* Cards grid */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr; } }
+/* v23: smoother motion and 25% softer circuit glow. */
+.trace,.glow-trace{animation-timing-function:cubic-bezier(.45,0,.55,1);animation-duration:1.25s;animation-delay:calc(var(--i)*.012s)}
+.wire-glow{opacity:.6375}
+.glow-trace{opacity:.75}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.675))}
+.gear-halo{opacity:.615}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
 
-    .card{
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      background:#fff;
-      box-shadow: 0 0 0.8rem rgba(255, 212, 0, 0.20);
-      overflow:hidden;
-    }
+/* v24: constant-speed, frame-friendly circuit reveal.
+   Linear dash progression avoids the noticeable easing surge at corners. */
+.trace,.glow-trace{animation-timing-function:linear;animation-duration:1.25s;animation-delay:calc(var(--i)*.012s);will-change:stroke-dashoffset}
 
-    .cardHead{
-      padding:14px 14px 12px;
-      border-bottom:1px solid rgba(0,0,0,0.08);
-      background: radial-gradient(circle at 15% 30%, rgba(255, 212, 0, 0.20), transparent 55%), #fff;
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-    }
+/* v25: higher-resolution SVG stroke reveal and gentle endpoint easing. */
+.trace,.glow-trace{stroke-dasharray:1000;stroke-dashoffset:1000;animation-name:draw;animation-duration:1.25s;animation-timing-function:cubic-bezier(.32,.02,.68,.98);animation-delay:calc(var(--i)*.012s);will-change:auto}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
 
-    .role{ margin:0; font-size:15px; letter-spacing:-0.01em; }
-    .where{ margin:3px 0 0 0; color:var(--muted); font-size:13px; line-height:1.3; }
-    .dates{
-      font-size:12px;
-      color:rgba(0,0,0,0.55);
-      border:1px solid rgba(0,0,0,0.10);
-      padding:8px 10px;
-      border-radius:999px;
-      height:fit-content;
-      box-shadow: var(--shadowSoft);
-      white-space:nowrap;
-    }
 
-    .cardBody{ padding:12px 14px 14px; }
-    ul{ margin:0; padding-left:18px; color:var(--text); }
-    li{ margin:8px 0; line-height:1.45; }
+/* v26 — align name rule with name, improve line spacing and softer continuous illumination */
+.intro{width:max-content;max-width:90%}
+.name-rule{width:100%;max-width:none}
+.trace,.glow-trace{animation-duration:1.4s;animation-timing-function:cubic-bezier(.4,0,.6,1);animation-delay:calc(var(--i)*.008s)}
+.wire-glow{opacity:.76}
+.glow-trace{opacity:.82}
+.trace{filter:drop-shadow(0 0 2px rgba(255,213,125,.78))}
+@media(prefers-reduced-motion:reduce){.trace,.glow-trace{animation:none;stroke-dashoffset:0}}
 
-    .skillsRow{ margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
-    .tag{
-      border:1px solid rgba(0,0,0,0.12);
-      border-radius:999px;
-      padding:8px 10px;
-      font-size:13px;
-      background:#fff;
-      box-shadow: 0 0 0.6rem rgba(255, 212, 0, 0.14);
-      font-weight:650;
-    }
+/* v27: name underline powers on from left to right, with a restrained amber glow. */
+.name-rule{background:transparent;isolation:isolate}
+.name-rule::before{content:"";position:absolute;inset:0;background:#ffd080;box-shadow:0 0 4px rgba(255,202,110,.8),0 0 11px rgba(255,166,62,.53),0 0 19px rgba(255,151,52,.2);transform-origin:left center;transform:scaleX(0);animation:namePower 1.25s cubic-bezier(.32,.02,.68,.98) .08s both}
+.name-rule::after{opacity:0;animation:nameTerminal .18s ease-out 1.28s forwards;box-shadow:0 0 5px rgba(255,194,93,.65)}
+@keyframes namePower{to{transform:scaleX(1)}}
+@keyframes nameTerminal{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.name-rule::before,.name-rule::after{animation:none;transform:none;opacity:1}}
 
-    /* Optional: quick anchor buttons to jump between categories */
-    .jumpRow{
-      margin-top: 12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .jump{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(0,0,0,0.12);
-      background:#fff;
-      color:var(--text);
-      text-decoration:none;
-      font-weight:700;
-      box-shadow: 0 0 0.6rem rgba(255, 212, 0, 0.14);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-size:13px;
-    }
-    .jump:hover{ transform: translateY(-1px); box-shadow: var(--shadowGlow); }
+/* V28 interior pages. The approved V27 homepage rules above are not modified. */
+#portfolio-page{display:none}.page-open .landing{display:none}.page-open #portfolio-page{display:block}.page-open{background:#210913;color:#f6e5c6}#portfolio-page{min-height:100svh;background:radial-gradient(ellipse at 100% 0%,#542039 0%,transparent 45%),linear-gradient(135deg,#220912,#300d20 70%,#1b0812);color:#f3ddbb}#portfolio-page *{box-sizing:border-box}.page-shell{max-width:1600px;margin:auto;min-height:100svh;padding:0 clamp(24px,5.8vw,110px)}.page-top{display:flex;align-items:center;gap:38px;justify-content:space-between;padding:31px 0 27px;border-bottom:1px solid #a36a5669}.site-mark{font-size:14px;letter-spacing:.24em;color:#ffe0a6;text-decoration:none;white-space:nowrap}.site-mark span{color:#b27b64}.page-nav{display:flex;align-items:center;gap:clamp(13px,1.7vw,27px);flex-wrap:wrap}.page-nav a{font-size:10px;letter-spacing:.12em;text-decoration:none;color:#c5a4a0;transition:color .2s}.page-nav a:hover,.page-nav a.active{color:#ffdb93}.page-nav a.active{border-bottom:1px solid #e7b66c;padding-bottom:6px}.mobile-nav-toggle{display:none}.page-main{padding:clamp(45px,7vw,108px) 0 90px}.eyebrow{font-size:11px;letter-spacing:.24em;color:#e7b66c;font-weight:500}.page-heading{margin:0 0 clamp(42px,5vw,85px);max-width:980px}.page-heading h1{font-size:clamp(60px,9vw,145px);font-weight:300;letter-spacing:-.055em;line-height:.95;margin:23px 0 28px;color:#ffe5bc}.page-heading h1 em{font-style:normal;color:#c18e8d}.gold-dot{color:#eab866}.lead{font-size:clamp(17px,1.7vw,23px);line-height:1.65;color:#d6b8b1;max-width:790px;font-weight:300}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(35px,6vw,100px);align-items:center}.photo-slot{min-height:320px;position:relative;overflow:hidden;background:linear-gradient(145deg,#56243c,#250b1c 72%);border:1px solid #a36c6177;background-size:cover;background-position:center}.photo-slot:before,.photo-slot:after{content:'';position:absolute;width:42px;height:42px;border:1px solid #dda95c;opacity:.8}.photo-slot:before{top:17px;left:17px;border-right:0;border-bottom:0}.photo-slot:after{right:17px;bottom:17px;border-left:0;border-top:0}.photo-slot-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;padding:20px;color:#d7ac83;letter-spacing:.18em;font-size:11px}.photo-slot-inner small{font-size:11px;color:#b18d90;letter-spacing:.08em;max-width:90%}.photo-symbol{font-size:40px;color:#e1ac65}.photo-slot.has-photo .photo-slot-inner{display:none}.about-grid>.photo-slot{min-height:520px}.prose h2,.resume-hero h2{font-size:clamp(30px,3.4vw,52px);line-height:1.15;font-weight:300;color:#ffe4b8}.prose p,.resume-hero p{font-size:16px;line-height:1.9;color:#d2b5b0}.text-link{display:inline-block;color:#f2bd75;text-decoration:none;font-size:12px;letter-spacing:.15em;margin-top:20px;border-bottom:1px solid #e3aa68;padding-bottom:10px}.section-block{margin-top:115px}.feature-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}.feature-grid article,.skill-grid article{border-top:1px solid #ba866d;padding:25px 5px}.feature-grid b{color:#dfad72;font-weight:400}.feature-grid h3,.skill-grid h3{font-weight:400;font-size:21px;color:#fbe0b7}.feature-grid p,.skill-grid p{color:#cbaaa7;line-height:1.75}.projects-list{display:flex;flex-direction:column;gap:38px}.project-card{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(25px,4.5vw,75px);align-items:center;padding:0 0 40px;border-bottom:1px solid #9864536e}.project-photo .photo-slot{min-height:360px}.project-copy h2{font-size:clamp(30px,3.3vw,54px);font-weight:300;line-height:1.12;margin:20px 0;color:#ffe3b5}.project-copy>p,.timeline-body>p{font-size:16px;line-height:1.8;color:#d6b5b1}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}.chips span{font-size:11px;letter-spacing:.07em;color:#d9b3a5;border:1px solid #9564568a;border-radius:50px;padding:7px 11px}.details-button{font:inherit;font-size:11px;letter-spacing:.17em;color:#f4c078;border:0;border-bottom:1px solid #d7a46a;padding:10px 0;background:none;cursor:pointer}.details-button span{padding-left:10px}.project-details{padding:14px 0}.project-details li,.timeline-body li{color:#c9aca8;line-height:1.75;margin:7px 0}.timeline{border-top:1px solid #a77563}.timeline-item{display:grid;grid-template-columns:27% 1fr;gap:35px;border-bottom:1px solid #8f5e5a75;padding:48px 0}.timeline-date{color:#dcb276;font-size:12px;letter-spacing:.18em}.timeline-body h2{font-weight:300;font-size:clamp(34px,4vw,60px);margin:9px 0 0}.timeline-body h3{font-weight:400;color:#d9a4a0;font-size:17px;margin:10px 0 20px}.timeline-body ul{padding-left:20px}.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.award-card{padding:40px;background:#51203942;border:1px solid #a676635f;min-height:265px}.award-value{font-size:clamp(44px,5vw,76px);font-weight:300;color:#ffd99b;margin:18px 0}.award-card h2{font-size:21px;font-weight:400;margin:0}.award-card p{color:#cba9a5;line-height:1.7}.resume-hero{display:grid;grid-template-columns:1.5fr .5fr;gap:60px;border-top:1px solid #aa755f;padding-top:40px}.resume-stats{border-left:1px solid #a36c6177;padding-left:35px;display:flex;flex-direction:column;gap:30px}.resume-stats div{display:flex;flex-direction:column}.resume-stats strong{font-size:65px;color:#ffd9a0;font-weight:300}.resume-stats span{font-size:10px;letter-spacing:.13em;color:#c7a09d}.solid-link{display:inline-block;text-decoration:none;background:#f1c280;color:#29101c;padding:15px 21px;font-size:12px;letter-spacing:.13em;margin-top:23px}.resume-note,.contact-footer{color:#b18e92;font-size:13px;margin-top:35px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-tile{border:1px solid #a878667a;padding:35px;text-decoration:none;color:#f7dcb6;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}.contact-tile:hover{background:#60304865}.contact-tile h2{font-size:clamp(21px,2.5vw,38px);font-weight:300;overflow-wrap:anywhere}.contact-tile>span:last-child{font-size:11px;letter-spacing:.15em;color:#e7b66c}.page-footer{border-top:1px solid #9864536e;display:flex;justify-content:space-between;gap:20px;padding:25px 0 35px;font-size:10px;letter-spacing:.15em;color:#ad888a}.page-footer a{color:#e8b77b;text-decoration:none}@media(max-width:950px){.page-top{flex-wrap:wrap}.page-nav{width:100%;justify-content:space-between}.page-nav a{font-size:9px}.about-grid,.project-card{grid-template-columns:1fr}.project-photo .photo-slot{min-height:300px}.about-grid>.photo-slot{min-height:350px}.resume-hero{grid-template-columns:1fr}.resume-stats{flex-direction:row;border-left:0;border-top:1px solid #a36c6177;padding:25px 0 0}.feature-grid,.skill-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.page-shell{padding:0 22px}.page-top{padding:22px 0}.mobile-nav-toggle{display:block;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em}.page-nav{display:none;flex-direction:column;align-items:flex-start;gap:15px;padding-top:16px}.page-nav.show{display:flex}.page-heading h1{font-size:clamp(55px,14vw,90px)}.feature-grid,.skill-grid,.awards-grid,.contact-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:14px}.resume-stats strong{font-size:43px}.resume-stats{gap:20px}.page-footer{flex-direction:column}.project-photo .photo-slot{min-height:250px}}
 
-    /* Footer */
-    .site-footer{
-      width: min(1100px, 92vw);
-      margin: 28px auto 0;
-      padding: 14px 16px;
-      text-align: center;
-      color: rgba(0,0,0,0.60);
-      font-size: 13px;
-      border: 1px solid rgba(0,0,0,0.09);
-      border-radius: 16px;
-      background: #fff;
-      box-shadow: 0 0 0.7rem rgba(255, 212, 0, 0.18);
-    }
-  </style>
-</head>
 
-<body>
-  <div class="wrap">
-    <header>
-      <h1 class="name">Experience</h1>
-      <nav class="toplinks" aria-label="Top links">
-        <a class="pill" href="index.html">← Home</a>
-        <a class="pill" href="main.html">Projects</a>
-        <a class="pill" href="experience.html">Experience</a>
-        <a class="pill" href="media.html">Media</a>
+/* Final release — case study image galleries */
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0 4px}
+.project-gallery figure{margin:0;border:1px solid rgba(237,185,105,.22);background:rgba(22,7,16,.35);overflow:hidden}
+.project-gallery img{display:block;width:100%;height:220px;object-fit:cover;object-position:center;background:#2c1524}
+.project-gallery figcaption{padding:10px 13px 13px;font-size:12px;line-height:1.55;color:#d8bb9b;letter-spacing:.015em}
+.project-details ul{padding-left:20px}.project-details li{margin-bottom:11px;line-height:1.7}
+.project-photo .photo-slot.has-photo{background-position:center;background-size:cover}
+@media(max-width:720px){.project-gallery{grid-template-columns:1fr}.project-gallery img{height:230px}}
 
-        <!-- Put your PDF filename here (same folder as HTML) -->
-        <a class="pill" href="./Lyra_Fletcher_CV_2026.pdf" target="_blank" rel="noopener">Open CV</a>
-      </nav>
-    </header>
+/* Standalone static pages: navigation works without JavaScript. */
+.case-details{margin-top:6px}
+.case-details>summary{display:inline-block;list-style:none;user-select:none}
+.case-details>summary::-webkit-details-marker{display:none}
+.case-details[open]>summary{margin-bottom:12px}
+.case-details[open]>summary span{display:none}
+.case-details[open]>summary::after{content:"  −"}
+.mobile-menu{display:none}
+.mobile-menu summary{display:inline-block;cursor:pointer;background:none;border:1px solid #b08472;color:#f4d2a0;padding:9px 12px;font:inherit;font-size:11px;letter-spacing:.1em;list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu-links{position:absolute;z-index:20;right:22px;left:22px;top:calc(100% - 4px);padding:20px;display:flex;flex-direction:column;gap:16px;border:1px solid #a6766370;background:#321224;box-shadow:0 12px 32px #1a071078}
+.page-top{position:relative}
+.mobile-menu-links a{color:#f5dcb3;letter-spacing:.12em;text-decoration:none;font-size:12px}
+@media(max-width:620px){.mobile-menu{display:block}.page-nav{display:none}}
 
-    <section class="hero" aria-label="Experience intro">
-      <h2>Snapshot</h2>
-      <p>
-      A comprehensive overview of my experience technically, personally, and socially. Each entry highlights impact, scope, and the skills I used.
-      </p>
 
-      <div class="jumpRow" aria-label="Jump to categories">
-        <a class="jump" href="#work">Work</a>
-        <a class="jump" href="#design-teams">Design Teams</a>
-        <a class="jump" href="#volunteering">Volunteering</a>
-      </div>
-    </section>
+/* V30 refinements — more detailed work case studies, unchanged approved homepage */
+.page-heading .lead{max-width:890px}
+.work-quickstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:8px 0 56px}
+.work-quickstats>div{border-top:1px solid #c28c65;background:linear-gradient(130deg,#6c30413a,#2e10231e);padding:21px 17px}
+.work-quickstats strong{display:block;font-weight:300;font-size:clamp(32px,3.6vw,51px);color:#ffe0a2;line-height:1.1}
+.work-quickstats span{display:block;font-size:10px;letter-spacing:.09em;line-height:1.6;color:#d9b6ae;margin-top:9px;text-transform:uppercase}
+.work-entry{border-bottom:1px solid #a26a5d66;padding:48px 0 65px}
+.work-entry:last-child{border-bottom:0}
+.work-entry-head{display:grid;grid-template-columns:minmax(170px,24%) 1fr;gap:clamp(22px,4vw,65px)}
+.work-entry-head h2{font-size:clamp(42px,5.3vw,82px);font-weight:300;color:#ffe1b2;line-height:1.05;margin:7px 0 14px}
+.work-entry-head h3{font-size:clamp(17px,1.8vw,26px);color:#edc5af;font-weight:400;margin:0 0 14px}
+.work-entry-head p{font-size:16px;line-height:1.8;color:#d8b7ad;max-width:920px;margin:0 0 21px}
+.work-role{font-size:11px;line-height:1.8;letter-spacing:.14em;color:#e7b975;text-transform:uppercase}
+.work-date{font-size:12px;letter-spacing:.15em;color:#f3c98a;display:block;margin-top:13px}
+.work-discipline{font-size:10px;letter-spacing:.11em;line-height:1.6;color:#bfa19d;display:block;margin-top:10px}
+.work-detail-layout{margin:30px 0 10px 24%;padding-left:clamp(22px,4vw,65px)}
+.work-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:24px}
+.work-module{border:1px solid #a679666b;background:linear-gradient(160deg,#54233c49,#260d1e28);padding:23px 25px 21px}
+.work-module h4{font-size:15px;letter-spacing:.07em;font-weight:500;color:#ffd497;margin:0 0 12px}
+.work-module p{font-size:14px;line-height:1.72;color:#cfaca7;margin:0}
+.work-module p+p{margin-top:11px}
+.work-module ul{padding-left:19px;margin:0}
+.work-module li{font-size:14px;line-height:1.75;color:#d3afa7;margin-bottom:8px}
+.work-module li::marker{color:#e9b777}
+.work-full{grid-column:1/-1}
+.work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.work-gallery figure{margin:0;border:1px solid #9b6a6469;background:#2b101e;overflow:hidden}
+.work-gallery img{display:block;width:100%;height:200px;object-fit:cover;object-position:center}
+.work-gallery figcaption{font-size:11px;line-height:1.6;color:#d5b2a0;padding:11px 13px 14px}
+.work-caveat{font-size:12px!important;color:#b18d92!important;line-height:1.65!important;margin:16px 0!important}
+.work-link{font-size:11px;letter-spacing:.13em;color:#efbc77;text-decoration:none;border-bottom:1px solid #d1a06e;display:inline-block;padding:10px 0;margin:18px 0 8px}
+.work-link:hover{color:#ffe5b7}
+.work-section-label{margin:65px 0 4px;font-size:12px;letter-spacing:.18em;color:#dbb16e}
+.achievement-note{display:inline-block;border:1px solid #d4a56b8f;background:#7e503c26;color:#f6c482;font-size:11px;letter-spacing:.11em;padding:9px 13px;margin:0 0 21px}
+.project-evidence{border-left:2px solid #d9ae77;padding:10px 17px;color:#ddbab0;font-size:13px;line-height:1.65;margin:13px 0 20px;background:#682d3b25}
+.resume-stats{min-width:230px}
+.project-copy h2{line-height:1.13}
+@media(max-width:950px){.work-detail-layout{margin-left:0;padding-left:0}.work-detail-grid{grid-template-columns:1fr}.work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.work-quickstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.work-entry-head{grid-template-columns:1fr;gap:11px}.work-entry{padding:26px 0 47px}.work-gallery{grid-template-columns:1fr}.work-gallery img{height:240px}.work-quickstats{gap:8px}.work-quickstats>div{padding:14px 12px}}
 
-    <!-- ===================== WORK ===================== -->
-    <section class="section" id="work" aria-label="Work experience">
-      <div class="sectionHead">
-        <h2>Work</h2>
-        <small>Internships, part-time roles, and paid engineering work</small>
-      </div>
+/* Expanded 2026 portfolio: technical narrative and photographic evidence. */
+.engineering-section{border-top:1px solid rgba(236,180,111,.36);margin-top:52px;padding-top:27px}
+.engineering-section h3,.case-expansion h3{font-size:clamp(19px,2vw,27px);font-weight:400;color:#f6d3a0;margin:18px 0 12px}
+.engineering-section p,.engineering-section li,.case-expansion p,.case-expansion li{font-size:15px;line-height:1.82;color:#d8b8b2}
+.engineering-section ul,.case-expansion ul{padding-left:22px}
+.highlight-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:15px;margin:27px 0 32px}
+.highlight-band .highlight{padding:20px;border:1px solid #af795d82;background:linear-gradient(140deg,#632d393c,#250b181c)}
+.highlight strong{font-size:clamp(25px,3vw,43px);font-weight:300;color:#ffda9b;display:block;line-height:1.2}
+.highlight span{font-size:11px;letter-spacing:.07em;color:#d0aaa4;display:block;line-height:1.6;margin-top:6px}
+.case-expansion{margin:26px 0 12px;border-top:1px solid rgba(226,178,110,.32);padding:14px 0}
+.case-expansion p{margin:7px 0 13px}
+.photo-story{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:23px 0 30px}
+.photo-story figure{margin:0;border:1px solid rgba(224,167,113,.35);background:#1e0815;overflow:hidden}
+.photo-story img{width:100%;height:230px;object-fit:cover;display:block}
+.photo-story figcaption{padding:11px 13px;font-size:12px;line-height:1.5;color:#d8b9a4}
+.section-caption{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#f1bf78;margin-bottom:16px}
+.photo-needed{border:1px dashed #c89d6e8c;padding:16px 20px;margin:24px 0;color:#dbc2af;font-size:13px;line-height:1.7;background:#6132491c}
+.page-main .photo-needed strong{color:#f5d49a}
+.showcase-link{display:inline-block;border-bottom:1px solid #d5a363;color:#f3ca8d;text-decoration:none;padding:8px 0;letter-spacing:.1em;font-size:12px}
+.project-card{align-items:start}.project-copy{min-width:0}
+.photo-slot{background-color:#381426}
+@media(max-width:650px){.highlight-band{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-story{grid-template-columns:1fr}.photo-story img{height:240px}}
 
-      <div class="grid">
-        <!-- Template work card (replace text with your real role) -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Mechanical Engineering Co-op</h3>
-              <p class="where">Netgear • Richmond, B.C.</p>
-            </div>
-            <div class="dates">May 2025 – December 2025</div>
-          </div>
-          <div class="cardBody">
-              <ul>
-                <li>Designed and FEA-validated custom PCB assembly tooling in Creo, reducing assembly time by 15% while improving operator ergonomics and manufacturing consistency.</li>
-                <li>Developed a vacuum-assisted screen assembly system using relays and venturi-based pneumatics, increasing production speed by 10% and reducing material waste.</li>
-                <li>Created standardized CFD/FEA thermal simulation workflows to analyze mobile device hotspots, enabling faster in-house design iteration and improved thermal validation.</li>
-                <li>Designed and released production-ready optical light pipes, performing DFMA and injection molding analysis to ensure manufacturability, tooling feasibility, and regulatory compliance.</li>
-                <li>Generated detailed CAD models and engineering drawings in Creo, collaborating cross-functionally with electrical, manufacturing, and compliance teams from prototype through production.</li>
-              </ul>
 
-            <div class="skillsRow" aria-label="Skills">
-                <span class="tag">Creo CAD</span>
-                <span class="tag">FEA</span>
-                <span class="tag">CFD</span>
-                <span class="tag">DFMA</span>
-                <span class="tag">Injection Molding</span>
-                <span class="tag">Thermal Analysis</span>
-                <span class="tag">Pneumatics</span>
-                <span class="tag">GD&amp;T</span>
-                <span class="tag">Manufacturing Tooling</span>
-                <span class="tag">Prototyping</span>
-                <span class="tag">Cross-Functional Collaboration</span>
-                <span class="tag">Regulatory Compliance</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Add more Work cards by copy/pasting this block -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Pharmacy Assistant and Cashier</h3>
-              <p class="where">Alert Bay Drugs • Alert Bay, B.C.</p>
-            </div>
-            <div class="dates">July 2017 – September 2025</div>
-          </div>
-          <div class="cardBody">
-              <ul>
-                <li>Digitized freight receiving and inventory tracking, improving stock accuracy, traceability, and front-store replenishment efficiency.</li>
-                <li>Designed and built a website to support store visibility and customer access to services and contact information.</li>
-                <li>Assisted in preparing, charging, and delivering prescriptions, supporting accurate dispensing workflows and patient service under pharmacy supervision.</li>
-                <li>Managed front-store operations as a cashier and freight stocker, maintaining product availability, merchandising standards, and a positive customer experience.</li>
-              </ul>
-            <div class="skillsRow" aria-label="Skills">
-                <span class="tag">Inventory Management</span>
-                <span class="tag">Process Digitization</span>
-                <span class="tag">Customer Service</span>
-                <span class="tag">Prescription Support</span>
-                <span class="tag">Web Design</span>
-                <span class="tag">Point-of-Sale</span>
-                <span class="tag">Logistics</span>
-                <span class="tag">Accuracy &amp; Compliance</span>
-                <span class="tag">Communication</span>
-            </div>
-          </div>
-        </article>
-    
-    <!-- Add more Work cards by copy/pasting this block -->
-    <article class="card">
-      <div class="cardHead">
-        <div>
-          <h3 class="role">Literacy and Numeracy Coach</h3>
-          <p class="where">Cheslakees Elementary • Port Mcneill, B.C.</p>
-        </div>
-        <div class="dates">September 2019 – June 2020</div>
-      </div>
-      <div class="cardBody">
-          <ul>
-            <li>Supported kindergarten instruction across two classrooms (60 students), reinforcing early literacy and numeracy through small-group and one-on-one coaching.</li>
-            <li>Delivered individualized support in spelling, early reading, and foundational math skills, adapting approaches to student learning styles and confidence levels.</li>
-            <li>Collaborated with classroom teachers to align learning activities, track progress, and adjust support strategies based on student needs.</li>
-            <li>Fostered a positive learning environment that built student confidence, engagement, and participation in early academic development.</li>
-          </ul>
-        <div class="skillsRow" aria-label="Skills">
-            <span class="tag">Teaching</span>
-            <span class="tag">Mentoring</span>
-            <span class="tag">Individualized Instruction</span>
-            <span class="tag">Learning Assessment</span>
-            <span class="tag">Confidence Building</span>
-            <span class="tag">Classroom Collaboration</span>
-            <span class="tag">Community Engagement</span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-    <!-- ===================== DESIGN TEAMS ===================== -->
-    <section class="section" id="design-teams" aria-label="Design team experience">
-      <div class="sectionHead">
-        <h2>Design Teams</h2>
-        <small>Student design teams</small>
-      </div>
-
-      <div class="grid">
-        <!-- UBC Thunder Bikes role (edit dates/details as needed) -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Mechanical Team Lead</h3>
-              <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
-            </div>
-            <div class="dates">April 2025 – Present</div>
-          </div>
-          <div class="cardBody">
-              <ul>
-                  <li>Leading preparation of a ground-up motorcycle design for the MotoStudent International competition (Spain, 2027), developing system architecture, design milestones, and validation plans.</li>
-                <li>Leading and mentored a 20-member mechanical team, training new members in CAD, manufacturing processes, and engineering best practices across chassis, cooling, battery, and suspension sub-teams.</li>
-                <li>Directing end-to-end system development (concept → design → build → test → iterate), coordinating schedules, deliverables, and technical reviews to meet competition and project deadlines.</li>
-                <li>Ran CFD/FEA thermal simulations to optimize battery plate and cooling system designs, improving thermal performance, reliability, and safety under race conditions.</li>
-                <li>Designed, fabricated, and welded frame prototypes, validating manufacturability and structural performance through hands-on testing and iteration.</li>
-                <li>Collaborated cross-functionally with electrical, controls, and manufacturing teams to align system integration, packaging, and performance requirements.</li>
-              </ul>
-            <div class="skillsRow" aria-label="Skills">
-                <span class="tag">Technical Leadership</span>
-                <span class="tag">Systems Engineering</span>
-                <span class="tag">Project Management</span>
-                <span class="tag">FEA</span>
-                <span class="tag">CFD</span>
-                <span class="tag">Vehicle Design</span>
-                <span class="tag">Welding</span>
-                <span class="tag">Design Reviews</span>
-                <span class="tag">Validation &amp; Testing</span>
-                <span class="tag">Cross-Team Coordination</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Second design team card placeholder -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Battery/Thermal Cooling Lead</h3>
-              <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
-            </div>
-            <div class="dates">September 2024 – April 2025</div>
-          </div>
-          <div class="cardBody">
-              <ul>
-                <li>Led a 4-person subteam to design and manufacture a liquid cooling circuit and custom barbs, increasing system heat rejection to 16 kW (+41% YoY).</li>
-                <li>Designed and validated battery cooling plates, achieving 8 kW heat removal and reduced thermal gradients by modeling heat transfer in Python and MATLAB.</li>
-                <li>Developed CFD/FEA models in ANSYS Fluent/Mechanical to analyze airflow, conduction paths, and thermal performance, guiding geometry and material selection.</li>
-                <li>Coordinated fabrication and integration of cooling components, ensuring fit, serviceability, and safe operation within the battery enclosure.</li>
-              </ul>
-            <div class="skillsRow" aria-label="Skills">
-                <span class="tag">Thermal Management</span>
-                <span class="tag">Heat Transfer</span>
-                <span class="tag">CFD</span>
-                <span class="tag">FEA</span>
-                <span class="tag">Python</span>
-                <span class="tag">MATLAB</span>
-                <span class="tag">Liquid Cooling</span>
-                <span class="tag">Battery Safety</span>
-                <span class="tag">Design Optimization</span>
-            </div>
-          </div>
-        </article>
-    
-    <!-- Second design team card placeholder -->
-    <article class="card">
-      <div class="cardHead">
-        <div>
-          <h3 class="role">General Member</h3>
-          <p class="where">UBC Thunder Bikes • Vancouver, BC</p>
-        </div>
-        <div class="dates">September 2023 – April 2024</div>
-      </div>
-      <div class="cardBody">
-          <ul>
-            <li>Designed, manufactured, and assembled the battery enclosure for the team’s first motorcycle iteration, ensuring structural integrity, electrical isolation, and serviceability.</li>
-            <li>Contributed to hands-on fabrication across chassis, cooling, and battery systems, including CAD modeling, welding, machining, and 3D printing.</li>
-            <li>Supported prototype testing and competition preparation, contributing to a first-place finish in the Lightweight class at the 2024 Monterey MotoFest.</li>
-            <li>Collaborated with electrical and mechanical leads to integrate systems, resolve packaging constraints, and improve reliability and maintainability.</li>
-          </ul>
-        <div class="skillsRow" aria-label="Skills">
-            <span class="tag">CAD Modeling</span>
-            <span class="tag">Fabrication</span>
-            <span class="tag">Welding</span>
-            <span class="tag">Machining</span>
-            <span class="tag">3D Printing</span>
-            <span class="tag">Assembly</span>
-            <span class="tag">Testing</span>
-            <span class="tag">Team Collaboration</span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-    <!-- ===================== VOLUNTEERING ===================== -->
-    <section class="section" id="volunteering" aria-label="Volunteering experience">
-      <div class="sectionHead">
-        <h2>Volunteering</h2>
-        <small>Community leadership, service, and health-focused initiatives</small>
-      </div>
-
-      <div class="grid">
-        <!-- FIMRC role -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Executive Leadership — Student Chapter (Secretary → VP → President → Treasurer)</h3>
-              <p class="where">FIMRC UBC Chapter • Vancouver, BC</p>
-            </div>
-            <div class="dates">September 2022 – Present</div>
-          </div>
-          <div class="cardBody">
-              <ul>
-                <li>Progressed through four executive roles over four years, shaping chapter strategy, operations, and financial stewardship for a student organization focused on global healthcare access.</li>
-                <li>Grew active membership by 300% as President and led fundraising efforts raising $4,500+ since 2022 to support international medical relief and local outreach initiatives.</li>
-                <li>Managed budgeting, partnerships, and event programming to strengthen chapter sustainability, visibility, and long-term impact.</li>
-                <li>Volunteered internationally as a First Responder in Costa Rica, Ecuador, and Peru, supporting vaccination efforts and delivering health and safety training in community and clinical settings.</li>
-              </ul>
-            <div class="skillsRow" aria-label="Skills">
-                <span class="tag">Strategic Leadership</span>
-                <span class="tag">Fundraising</span>
-                <span class="tag">Budgeting</span>
-                <span class="tag">Team Building</span>
-                <span class="tag">Partnerships</span>
-                <span class="tag">Event Planning</span>
-                <span class="tag">Public Speaking</span>
-                <span class="tag">Stakeholder Engagement</span>
-            </div>
-          </div>
-        </article>
-        
-            <!-- FAST role -->
-            <article class="card">
-              <div class="cardHead">
-                <div>
-                  <h3 class="role">Director of Clinical Care</h3>
-                  <p class="where">UBC First Aid Student Team • Vancouver, BC</p>
-                </div>
-                <div class="dates">August 2025 – Present</div>
-              </div>
-              <div class="cardBody">
-                  <ul>
-                    <li>Founded and led the Clinical Care program, establishing the team’s medical governance, scope of practice, and operational framework.</li>
-                    <li>Authored medical protocols and liability waivers to ensure regulatory alignment, risk management, and safe field deployment.</li>
-                    <li>Organized and administered naloxone training and a First Responder bootcamp, certifying team members in emergency response and patient safety.</li>
-                    <li>Coordinated with UBC Campus Security to prepare the team for joint emergency response operations beginning in Spring 2026.</li>
-                  </ul>
-                <div class="skillsRow" aria-label="Skills">
-                    <span class="tag">Emergency Response</span>
-                    <span class="tag">Medical Protocols</span>
-                    <span class="tag">Risk Management</span>
-                    <span class="tag">Training &amp; Instruction</span>
-                    <span class="tag">Regulatory Compliance</span>
-                    <span class="tag">Program Development</span>
-                    <span class="tag">Interagency Coordination</span>
-                    <span class="tag">Safety Systems</span>
-                </div>
-              </div>
-            </article>
-
-        <!-- First responder / instructor role -->
-        <article class="card">
-          <div class="cardHead">
-            <div>
-              <h3 class="role">Certified First Responder & First Aid Instructor</h3>
-              <p class="where">International Volunteer Experience • Various</p>
-            </div>
-            <div class="dates">2023 – Present</div>
-          </div>
-          <div class="cardBody">
-            <ul>
-              <li>Delivered training and support in high-responsibility environments with an emphasis on calm decision-making.</li>
-              <li>Adapted instruction to different audiences; ensured safety, clarity, and confidence under pressure.</li>
-              <li>Contributed to community outcomes through consistent volunteering and preparedness-focused education.</li>
-            </ul>
-            <div class="skillsRow" aria-label="Skills">
-              <span class="tag">Teaching</span>
-              <span class="tag">Emergency Response</span>
-              <span class="tag">Teamwork</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    
-    
-    <!-- club mech role -->
-    <article class="card">
-      <div class="cardHead">
-        <div>
-          <h3 class="role">Secretary</h3>
-          <p class="where">Club Mech • Vancouver, BC</p>
-        </div>
-        <div class="dates">August 2025 – Present</div>
-      </div>
-      <div class="cardBody">
-          <ul>
-            <li>Serve as Secretary for the Mechanical Engineering student club, managing meeting records, communications, and organizational documentation.</li>
-            <li>Design graphics and promotional materials to support events, workshops, and student engagement initiatives.</li>
-            <li>Volunteer at academic and social events, providing logistical support and student-facing assistance to strengthen community and participation within the Mechanical Engineering program.</li>
-          </ul>
-        <div class="skillsRow" aria-label="Skills">
-            <span class="tag">Communication</span>
-            <span class="tag">Graphic Design</span>
-            <span class="tag">Event Support</span>
-            <span class="tag">Documentation</span>
-            <span class="tag">Student Engagement</span>
-            <span class="tag">Team Coordination</span>
-        </div>
-      </div>
-    </article>
-    
-    <!-- ubcdc -->
-    <article class="card">
-      <div class="cardHead">
-        <div>
-          <h3 class="role">Executive Leadership — Secretary → External VP</h3>
-          <p class="where">Club Mech • Vancouver, BC</p>
-        </div>
-        <div class="dates">September 2022 – April 2025</div>
-      </div>
-      <div class="cardBody">
-          <ul>
-            <li>Progressed from General Member to Secretary to External Vice President, taking on increasing responsibility for operations, communications, and external partnerships.</li>
-            <li>Led external relations and partnership development, coordinating with sponsors, student organizations, and industry partners to expand event reach and professional engagement.</li>
-            <li>Managed organizational communications and documentation, maintaining meeting records, outreach materials, and stakeholder correspondence.</li>
-            <li>Planned and supported professional development and networking events, facilitating student participation and cross-organization collaboration.</li>
-          </ul>
-        <div class="skillsRow" aria-label="Skills">
-            <span class="tag">Leadership Progression</span>
-            <span class="tag">External Relations</span>
-            <span class="tag">Partnership Development</span>
-            <span class="tag">Event Planning</span>
-            <span class="tag">Professional Communication</span>
-            <span class="tag">Organizational Management</span>
-            <span class="tag">Stakeholder Engagement</span>
-            <span class="tag">Public Speaking</span>
-            <span class="tag">Team Coordination</span>
-            <span class="tag">Strategic Outreach</span>
-
-        </div>
-      </div>
-    </article>
-    
-
-    <footer class="site-footer">© Lyra Fletcher 2026</footer>
-  </div>
-</body>
-</html>
-
+/* Readability & navigation refresh: applied to interior pages only. */
+.page-main{font-size:clamp(16px,1.08vw,18px);line-height:1.72}
+.page-main p,.page-main li{font-size:clamp(16px,1.04vw,18px);line-height:1.78}
+.page-main .eyebrow,.page-main .section-caption{font-size:12px;line-height:1.6}
+.page-main .chips span{font-size:13px;line-height:1.45}
+.page-main .project-card{margin-bottom:36px;padding-bottom:42px;scroll-margin-top:106px}
+.page-main .project-card h2{font-size:clamp(28px,3vw,48px);line-height:1.16}
+.page-main .project-card p{max-width:68ch}
+.page-main .project-details li{margin:0 0 14px}
+.page-main .project-gallery figcaption{font-size:13px}
+.page-main .work-entry{scroll-margin-top:100px}
+.project-directory{margin:26px 0 65px;padding:26px;border:1px solid rgba(237,185,105,.28);background:rgba(27,6,19,.46);border-radius:6px}
+.project-directory h2{font-size:clamp(22px,2.2vw,32px);font-weight:400;margin:0 0 9px;color:#ffe1ae}
+.project-directory>p{margin:0 0 22px;color:#d9b4ae}
+.project-directory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.project-directory-grid a{display:flex;flex-direction:column;justify-content:center;gap:5px;text-decoration:none;border:1px solid rgba(237,185,105,.25);padding:14px 15px;background:rgba(128,58,72,.10);color:#f6dab0;line-height:1.3;font-size:16px;transition:background .2s,border-color .2s}
+.project-directory-grid a:hover,.project-directory-grid a:focus-visible{background:rgba(210,130,78,.17);border-color:#e7bc80}
+.project-directory-grid a small{font-size:12px;color:#cfaaa7}
+.page-main .award-card p{font-size:16px}
+.award-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.award-links a{display:inline-flex;padding:10px 14px;border:1px solid rgba(237,185,105,.55);border-radius:3px;color:#f9d59b;text-decoration:none;font-size:14px;font-weight:500;line-height:1.3;letter-spacing:.01em}
+.award-links a:hover{background:#75445155}
+@media(max-width:900px){.project-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.project-directory{padding:18px}.project-directory-grid{grid-template-columns:1fr}.page-main{font-size:16px}}
+</style></head><body class="page-open"><section id="portfolio-page"><div class="page-shell"><header class="page-top"><a class="site-mark" href="./preview.html">LF<span> / </span>LYRA FLETCHER</a><nav aria-label="Portfolio navigation" class="page-nav"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a class="active" href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a href="./contact.html">GET IN TOUCH</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile portfolio navigation" class="mobile-menu-links"><a href="./about.html">ABOUT</a><a href="./resume.html">RESUME</a><a href="./projects.html">PROJECTS</a><a href="./experience.html">WORK EXPERIENCE</a><a href="./awards.html">AWARDS &amp; RECOGNITION</a><a href="./contact.html">GET IN TOUCH</a></nav></details></header><main class="page-main"><div class="page-heading"><span class="eyebrow">03 / ENGINEERING IN PRACTICE</span><h1>Experience<span class="gold-dot">.</span></h1><p class="lead">Detailed contributions across UAV prototyping, electromechanical integration, manufacturing engineering, thermal systems, and technical leadership.</p></div><section aria-label="Engineering work experience">
+<div class="work-quickstats">
+<div><strong>4</strong><span>UAV prototypes tested · AirMetal</span></div>
+<div><strong>15%</strong><span>Faster connector installation · NETGEAR</span></div>
+<div><strong>30%</strong><span>Reduced assembly time · NETGEAR</span></div>
+<div><strong>16 kW</strong><span>Designed cooling heat rejection · Thunderbikes</span></div>
+</div>
+<article class="work-entry" id="airmetal">
+<div class="work-entry-head"><div><span class="work-role">Electromechanical engineering co-op<br/>Acting mechanical team lead</span><span class="work-date">MAY – AUG 2026</span><span class="work-discipline">OTTAWA, ONTARIO · UAV DISTRIBUTOR &amp; DESIGNER</span></div>
+<div><h2>AirMetal Robotics</h2><h3>Fixed-wing UAV development, instrumentation &amp; validation</h3><p>Worked across mechanical design, embedded sensing, test engineering and flight-electronics integration during a rapid aircraft-development program. Designed custom hardware around existing commercial components, built measurement systems, and used ground/flight data to evaluate prototypes rather than treating integration as a simple assembly task.</p>
+<div class="achievement-note">4 PROTOTYPE AIRCRAFT TESTED   ·   1 INTEGRATED STRUCTURAL INSTRUMENTATION SYSTEM   ·   4 AIR/GROUND-SPEED SETUPS</div></div></div>
+<div class="work-detail-layout"><div class="work-detail-grid">
+<section class="work-module"><h4>01 / Structural instrumentation &amp; data acquisition</h4><ul>
+<li>Designed an <strong>ESP32-based wing measurement architecture</strong> to capture structural bending/deflection, loading response, vibration, acceleration and temperature during prototype testing.</li>
+<li>Selected and integrated existing sensing hardware, designed mechanical mounting/interfaces and wiring, and brought individual measurements together into <strong>one integrated test system</strong>.</li>
+<li>Acquired and processed measurements in <strong>Python</strong>, comparing measured structural response with calculations and theoretical expectations to guide design review and subsequent testing.</li>
+</ul></section>
+<section class="work-module"><h4>02 / Avionics, actuation &amp; flight systems</h4><ul>
+<li>Integrated <strong>Pixhawk 6C / ArduPilot</strong> flight controllers with GPS, pitot airspeed sensing, radio telemetry, servo-driven control surfaces, battery monitoring and failsafe logic.</li>
+<li>Configured systems in <strong>Mission Planner</strong>, including preflight checks, flight modes and safety/geofence functions; debugged relationships between radio inputs, servos, ESCs and power distribution.</li>
+<li>Built <strong>four aircraft-level airspeed / ground-speed measurement integrations</strong>, collected data from commercial sensors and flight systems, and used the outputs to assess aircraft test behaviour.</li>
+</ul></section>
+<section class="work-module"><h4>03 / Aircraft &amp; propulsion testing</h4><ul>
+<li>Helped fabricate, integrate and test <strong>four fixed-wing prototype aircraft</strong>, iterating mechanical layout, lightweight construction and integration of electronics and actuators.</li>
+<li>Designed propulsion-test hardware and characterized/tuned <strong>two-stroke gasoline engines</strong> using controlled thrust/performance testing.</li>
+<li>Prototyped landing-gear and other aircraft components, and built a <strong>water-agitation apparatus</strong> for waterproofing demonstrations and environmental-sealing tests.</li>
+</ul></section>
+<section class="work-module"><h4>04 / Electronics protection &amp; rapid fabrication</h4><ul>
+<li>Designed and 3D-printed a <strong>flexible TPU enclosure for a valuable test PCB</strong> exposed to hard collisions during indoor UAV flight experiments, including impacts with the ceiling and ground.</li>
+<li>Used the PCB footprint, mounting, access and impact-exposure constraints to shape a protective enclosure intended to reduce risk to expensive electronics.</li>
+<li>Iterated fixtures and other prototype hardware using CAD and additive manufacturing under short development timelines; no quantified drop-survival rate is claimed for the TPU case.</li>
+</ul></section>
+<section class="work-module"><h4>05 / Acting technical leadership</h4><ul>
+<li>Served as <strong>Acting Mechanical Team Lead</strong> for part of the co-op, coordinating a <strong>four-person development effort</strong>, technical reviews, design priorities and communication with other functions.</li>
+<li>Helped manage engineering decisions and resource allocation within a program with a reported <strong>$100K+ development budget</strong>, balancing rapid prototyping with testability, schedule and integration risk.</li>
+<li>Maintained practical interfaces between mechanical prototypes, electrical systems and the software/controls workflow.</li>
+</ul></section>
+</div>
+<a class="work-link" href="./projects.html#project-airmetal">EXPLORE THE UAV PROJECT ↗</a>
+<div class="work-gallery"><figure><img alt="Fixed-wing prototype hardware and integration" loading="lazy" src="./images/uav.jpg"/><figcaption>Fixed-wing prototype hardware and integration</figcaption></figure><figure><img alt="Flight-controller, power and sensor integration" loading="lazy" src="./images/uav-electronics.jpg"/><figcaption>Flight-controller, power and sensor integration</figcaption></figure><figure><img alt="Electronics prototype and wiring" loading="lazy" src="./images/uav-sensor.jpg"/><figcaption>Electronics prototype and wiring</figcaption></figure><figure><img alt="TPU enclosure components and protected test PCB" loading="lazy" src="./images/tpu.jpg"/><figcaption>TPU enclosure components and protected test PCB</figcaption></figure><figure><img alt="Flight-test ground-station setup" loading="lazy" src="./images/uav-ground.jpg"/><figcaption>Flight-test ground-station setup</figcaption></figure></div>
+<p class="work-caveat">Publication review: aircraft photographs and employer-developed test hardware should be cleared for public portfolio use before deployment.</p>
+</div><div class="section-caption" style="margin-top:35px">Engineering process · additional photographs</div><div class="photo-story"><figure><img alt="Flight-test / fixed-wing aircraft development" loading="lazy" src="./images/uav-flight.jpg"/><figcaption>Flight-test / fixed-wing aircraft development</figcaption></figure><figure><img alt="Custom propulsion characterization setup" loading="lazy" src="./images/uav-engine.jpg"/><figcaption>Custom propulsion characterization setup</figcaption></figure><figure><img alt="Water-agitation tank built for environmental-sealing tests" loading="lazy" src="./images/uav-tank.jpg"/><figcaption>Water-agitation tank built for environmental-sealing tests</figcaption></figure><figure><img alt="TPU protection for collision-exposed test electronics" loading="lazy" src="./images/tpu.jpg"/><figcaption>TPU protection for collision-exposed test electronics</figcaption></figure></div><a class="showcase-link" href="projects.html#project-airmetal">See engineering designs, prototypes &amp; photos ↗</a></article>
+<article class="work-entry" id="netgear">
+<div class="work-entry-head"><div><span class="work-role">Mechanical engineering co-op<br/>Research &amp; development</span><span class="work-date">MAY – DEC 2025</span><span class="work-discipline">RICHMOND, BRITISH COLUMBIA · CONSUMER NETWORKING DEVICES</span></div>
+<div><h2>NETGEAR R&amp;D</h2><h3>Production tooling, optical components &amp; reliability testing</h3><p>Developed manufacturable mechanical components and production tools, then checked designs against practical assembly and hardware-test requirements. The work combined Creo-based CAD and DFMA, physical iteration, optical/thermal analysis, and repeatable structural testing in a commercial product-development environment.</p>
+<div class="achievement-note">15% FASTER INSTALLATION   ·   30% FASTER ASSEMBLY   ·   LIGHT PIPES RELEASED FOR 8 PRODUCTS</div></div></div>
+<div class="work-detail-layout"><div class="work-detail-grid">
+<section class="work-module"><h4>01 / Precision installation tooling</h4><ul>
+<li>Designed and <strong>FEA-validated a custom i-PEX PCB connector installation tool</strong> in Creo, addressing assembly force application, repeatability and operator ergonomics.</li>
+<li>Iterated the tool around the actual connector geometry and assembly process, achieving an approximately <strong>15% reduction in installation time</strong>.</li>
+<li>Translated delicate electronics-handling requirements into a practical, operator-facing mechanical fixture.</li>
+</ul></section>
+<section class="work-module"><h4>02 / Assembly systems &amp; pneumatic tooling</h4><ul>
+<li>Designed production fixtures with an emphasis on <strong>DFMA, positional repeatability, assembly access and setup time</strong>; the resulting process reduced assembly time by approximately <strong>30%</strong>.</li>
+<li>Developed a vacuum-assisted handling/assembly concept using a venturi, <strong>24 V solenoid valves</strong>, inline filtration and a printed manifold/fixture, integrating pneumatic hardware with straightforward operator controls.</li>
+<li>Built and evaluated prototype parts, moving from CAD to physical iteration before production use.</li>
+</ul></section>
+<section class="work-module"><h4>03 / Optical product components</h4><ul>
+<li>Designed, optically simulated and released <strong>injection-moulded LED light pipes incorporated into eight Pro AV products</strong>.</li>
+<li>Used <strong>Creo</strong> and <strong>TracePro</strong> to consider light extraction, RGB colour mixing, brightness distribution, space constraints and mouldable geometry.</li>
+<li>Collaborated across mechanical/electronic product interfaces, including PCB fit, component positioning and thermal design constraints.</li>
+</ul></section>
+<section class="work-module"><h4>04 / Thermal modelling &amp; physical validation</h4><ul>
+<li>Built <strong>ANSYS thermal models</strong> of operating hardware and compared predicted temperatures with lab measurements to improve confidence in design decisions.</li>
+<li>Reported thermal predictions <strong>within approximately 7% of measured results</strong> on the relevant validation work, while considering model assumptions and test conditions.</li>
+<li>Contributed to repeatable simulation/measurement workflows, reducing dependence on unverified modelling assumptions.</li>
+</ul></section>
+<section class="work-module"><h4>05 / Structural reliability testing</h4><ul>
+<li>Conducted torsional loading at multiple angles and <strong>three-point bending tests</strong> for <strong>two product designs</strong>, capturing behaviour under defined load conditions.</li>
+<li>Produced corresponding <strong>ANSYS Mechanical structural models</strong> using measured/loading-related inputs; helped establish a repeatable torsion-test methodology.</li>
+<li>Used comparisons between physical tests and FEA to identify local stiffness and potential failure concerns.</li>
+</ul></section>
+<section class="work-module"><h4>06 / Lab process improvement</h4><ul>
+<li>Designed a <strong>UV-resin curing system</strong> to solidify liquid resin waste, improving handling safety and simplifying disposal workflow.</li>
+<li>Worked on practical test and fixture changes that made routine bench tasks more consistent and easier to execute.</li>
+</ul></section>
+</div>
+<a class="work-link" href="./projects.html#project-netgear">EXPLORE THE NETGEAR PROJECT ↗</a>
+<div class="work-gallery"><figure><img alt="i-PEX connector installation-tool prototype" loading="lazy" src="./images/netgear-tool.jpg"/><figcaption>i-PEX connector installation-tool prototype</figcaption></figure><figure><img alt="Vacuum / pneumatic assembly fixture development" loading="lazy" src="./images/netgear-pneumatic.jpg"/><figcaption>Vacuum / pneumatic assembly fixture development</figcaption></figure><figure><img alt="Optical light-pipe part prototypes" loading="lazy" src="./images/netgear-lightpipes.jpg"/><figcaption>Optical light-pipe part prototypes</figcaption></figure><figure><img alt="UV-resin curing system prototype" loading="lazy" src="./images/netgear-resin.jpg"/><figcaption>UV-resin curing system prototype</figcaption></figure></div>
+<p class="work-caveat">Commercial designs, production imagery and test specifications are subject to employer approval before public release.</p>
+</div><div class="section-caption" style="margin-top:35px">Engineering process · additional photographs</div><div class="photo-story"><figure><img alt="Creo-designed i-PEX connector installation fixture" loading="lazy" src="./images/netgear-tool.jpg"/><figcaption>Creo-designed i-PEX connector installation fixture</figcaption></figure><figure><img alt="Pneumatic vacuum-assisted assembly system" loading="lazy" src="./images/netgear-pneumatic.jpg"/><figcaption>Pneumatic vacuum-assisted assembly system</figcaption></figure><figure><img alt="Injection-moulded optical light-pipe development" loading="lazy" src="./images/netgear-lightpipes.jpg"/><figcaption>Injection-moulded optical light-pipe development</figcaption></figure><figure><img alt="UV-resin curing apparatus for lab processes" loading="lazy" src="./images/netgear-resin.jpg"/><figcaption>UV-resin curing apparatus for lab processes</figcaption></figure></div><a class="showcase-link" href="projects.html#project-netgear">See engineering designs, prototypes &amp; photos ↗</a></article>
+<article class="work-entry" id="thunderbikes">
+<div class="work-entry-head"><div><span class="work-role">Mechanical Team Lead (2026–27)<br/>Mechanical Co-Lead (2025–26)<br/>Cooling Lead (2024–25)</span><span class="work-date">SEP 2023 – PRESENT</span><span class="work-discipline">UBC VANCOUVER · MOTOSTUDENT ELECTRIC MOTORCYCLE TEAM</span></div>
+<div><h2>UBC Thunderbikes</h2><h3>Mechanical leadership, battery systems &amp; thermal management</h3><p>Lead mechanical engineering workstreams for a student-developed electric racing motorcycle: cooling, high-voltage battery packaging, chassis, fabrication, and subsystem integration. Coordinate technical reviews and mentorship across the approximately 30-person mechanical group while managing its $22,000 budget.</p>
+<div class="achievement-note">TEAM RESULT: 1ST PLACE · 2024 MOTOFEST OF MONTERREY</div></div></div>
+<div class="work-detail-layout"><div class="work-detail-grid">
+<section class="work-module"><h4>01 / Team and project management</h4><ul><li>Lead an approximately <strong>30-member mechanical team</strong> and manage its <strong>$22,000 mechanical-subteam budget</strong>, prioritizing expenditure across design, components, prototyping and manufacturing while coordinating design ownership, cross-team interfaces and design reviews.</li><li>Run weekly technical check-ins and <strong>two formal design reviews per academic term</strong>, encouraging analysis-backed design choices and earlier integration problem discovery.</li><li>Support preparations for <strong>MotoStudent Spain 2027</strong>; the future competition is a target, not a completed result.</li></ul></section>
+<section class="work-module"><h4>02 / Cooling-system development</h4><ul><li>Previously led a <strong>four-person thermal management group</strong> developing a liquid-cooling architecture rated for approximately <strong>16 kW total heat rejection</strong>, a <strong>41% year-over-year improvement</strong>.</li><li>Modelled battery cold plates designed for up to <strong>8 kW heat removal</strong>; evaluated serpentine coolant paths and heat-transfer constraints using Python/MATLAB, ANSYS and physical test parameters.</li><li>Worked on radiator characterization, fan integration, line routing, custom hose connectors and trade-offs between thermal performance, mass and manufacturability.</li></ul></section>
+<section class="work-module"><h4>03 / Battery, chassis &amp; manufacturing</h4><ul><li>Worked on a <strong>32s3p battery concept</strong> of approximately <strong>102.4 V, 45 Ah and 4.6 kWh</strong>, accounting for the interaction between packaging, structural support, high-voltage safety and heat rejection.</li><li>Applied structural FEA and CFD to cooling/chassis/battery components; designed non-conductive battery housing and manufacturing/test fixtures.</li><li>Fabricated or supported fabrication of mechanical components and welded jigs/stands through <strong>TIG/MIG welding</strong> and hands-on shop work.</li></ul></section>
+<section class="work-module"><h4>04 / Competition and iterative validation</h4><ul><li>The team competed at <strong>AHRMA Formula Lightning, NJMP (2024)</strong> and earned <strong>first place at Motofest of Monterrey (2024)</strong>—a team achievement, not an individual award.</li><li>Used cooling simulations and prototype builds to assess assumptions before manufacture; failure/stress plots are documented as <strong>design iteration data</strong>, not proof of final safety.</li><li>Balance long-horizon competition development with short-term build, test and recruitment deliverables.</li></ul></section>
+</div>
+<a class="work-link" href="./projects.html#project-thunderbikes">EXPLORE THE MOTORCYCLE PROJECT ↗</a>
+<div class="work-gallery"><figure><img alt="UBC Thunderbikes motorcycle at competition" loading="lazy" src="./images/motorcycle.jpg"/><figcaption>UBC Thunderbikes motorcycle at competition</figcaption></figure><figure><img alt="Liquid-cooling plate fluid/thermal simulation" loading="lazy" src="./images/cooling-cfd.jpg"/><figcaption>Liquid-cooling plate fluid/thermal simulation</figcaption></figure><figure><img alt="Electric motorcycle battery pack CAD" loading="lazy" src="./images/battery.jpg"/><figcaption>Electric motorcycle battery pack CAD</figcaption></figure><figure><img alt="Mechanical fabrication and TIG welding" loading="lazy" src="./images/welding-left.jpg"/><figcaption>Mechanical fabrication and TIG welding</figcaption></figure><figure><img alt="Machined cooling-system hose connectors" loading="lazy" src="./images/hose-parts.jpg"/><figcaption>Machined cooling-system hose connectors</figcaption></figure><figure><img alt="Wind-tunnel radiator characterization" loading="lazy" src="./images/wind-tunnel.jpg"/><figcaption>Wind-tunnel radiator characterization</figcaption></figure></div>
+</div><div class="section-caption" style="margin-top:35px">Engineering process · additional photographs</div><div class="photo-story"><figure><img alt="Hands-on welding and frame fabrication" loading="lazy" src="./images/welding-left.jpg"/><figcaption>Hands-on welding and frame fabrication</figcaption></figure><figure><img alt="Cooling-plate thermal/fluid modelling" loading="lazy" src="./images/cooling-cfd.jpg"/><figcaption>Cooling-plate thermal/fluid modelling</figcaption></figure><figure><img alt="Wind-tunnel measurement and radiator testing" loading="lazy" src="./images/wind-tunnel.jpg"/><figcaption>Wind-tunnel measurement and radiator testing</figcaption></figure><figure><img alt="Manufactured custom cooling-hose connectors" loading="lazy" src="./images/hose-parts.jpg"/><figcaption>Manufactured custom cooling-hose connectors</figcaption></figure></div><a class="showcase-link" href="projects.html#project-thunderbikes">See engineering designs, prototypes &amp; photos ↗</a></article>
+<p class="work-section-label">COMMUNITY, HEALTHCARE &amp; LEADERSHIP</p>
+<article class="work-entry" id="fimrc"><div class="work-entry-head"><div><span class="work-role">President (2024–25)<br/>Other executive roles (2022–26)</span><span class="work-date">2022 – 2026</span><span class="work-discipline">UBC · INTERNATIONAL HEALTHCARE OUTREACH</span></div><div><h2>FIMRC at UBC</h2><h3>Chapter leadership &amp; volunteer clinical programs</h3><p>Held successive leadership roles including chapter president, helping coordinate volunteers, fundraising, events and community healthcare outreach. Participated in international healthcare volunteer experiences in <strong>Costa Rica (2023), Ecuador (2024) and Peru (2025)</strong>. These experiences complemented my Red Cross First Responder and first-aid instructor training and strengthened my interest in patient-facing engineering solutions.</p></div></div></article>
+<article class="work-entry" id="fast"><div class="work-entry-head"><div><span class="work-role">Founding Director of Clinical Care</span><span class="work-date">2025 – FEB 2026</span><span class="work-discipline">UBC · STUDENT FIRST-RESPONSE TEAM</span></div><div><h2>UBC First Aid Student Team</h2><h3>Clinical protocols, first-responder education &amp; training</h3><p>Helped establish a university student first-aid organization. Developed clinical care protocols and helped deliver <strong>naloxone education, First Responder bootcamp training and responder skill development</strong>. Brought an emphasis on repeatable, actionable procedures to practical first-response preparation.</p></div></div></article>
+<article class="work-entry" id="pharmacy"><div class="work-entry-head"><div><span class="work-role">Pharmacy support &amp; process digitization</span><span class="work-date">2018 – 2024</span><span class="work-discipline">ALERT BAY, BC · FAMILY PHARMACY</span></div><div><h2>Community Pharmacy</h2><h3>Operations, service &amp; digital workflows</h3><p>Worked in the family pharmacy in a remote community, supporting day-to-day operations. Built the store website and worked on digitizing freight/administrative processes, strengthening an interest in translating technical systems into tools that are reliable for the people who actually use them.</p></div></div></article>
+</section></main><footer class="page-footer"><span>© 2026 LYRA FLETCHER</span><span>MECHANICAL ENGINEERING · MECHATRONICS</span><a href="./preview.html">BACK TO HOME ↑</a></footer></div></section></body></html>
